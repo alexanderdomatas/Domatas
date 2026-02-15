@@ -21,23 +21,23 @@ custom404Message = "Sorry, the page you are looking for could not be found. Just
   # Social media links
   [params.social]
     github = "https://github.com/alexanderdomatas"
-    linkedin = "https://www.linkedin.com/in/yourprofile"
-    email = "your.email@example.com"
+  #  linkedin = "https://www.linkedin.com/in/yourprofile"
+  #  email = ""
 
   # Avatar Configuration
   [params.avatar]
     # General avatar (used as fallback if page-specific avatar not set)
     # If you have a hosted image you want to use as-is. The template will attempt to use this if set.
-    url = "https://example.com/avatar.jpg"
+    #url = "https://github.com/alexanderdomatas/domatas/blob/main/Images/Hey.png?raw=true"
 
     # If you have an image you want to provide as an asset and run through Hugo's pipes to resize based on use.
     # This will only be used if "url" is *not* set.
     # This path is relative to the "assets" folder.
-    # assetPath = "images/avatar.png"
+     assetPath = "images/hey.png"
 
     # Enable automatic resizing of avatar images (default: true)
     # Set to false to use original image size and (May help preserve quality)
-    # enableResize = true
+     enableResize = true
 
     # Home page specific avatar (optional - falls back to general avatar if not set)
     [params.avatar.home]
