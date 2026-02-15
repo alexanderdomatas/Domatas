@@ -154,3 +154,7 @@ weight = 40
 [params.admonitions]
     # Choose between "emoji" and "favicon" (image)
     alertStyle = "favicon"
+
+[caches]
+      [caches.images]
+        dir = ':cacheDir/images'
