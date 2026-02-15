@@ -13,7 +13,7 @@ theme = 'mana'
   footerText = "Hey I know theres not much here, give a guy a break! sheeesh"
   heroTitleLine1 = "Domatas Domain"
   heroTitleLine2 = "Made it to see if I could!"
-
+  heroLogo = "/images/Hey.png"
   # 404 Page Configuration
   # Custom message for the 404 error page (supports HTML)
   # If not set, defaults to: "Sorry, the page you are looking for could not be found."
@@ -34,7 +34,7 @@ custom404Message = "Sorry, the page you are looking for could not be found. Just
     # If you have an image you want to provide as an asset and run through Hugo's pipes to resize based on use.
     # This will only be used if "url" is *not* set.
     # This path is relative to the "assets" folder.
-     assetPath = "images/hey.png"
+     assetPath = "/images/hey.png"
 
     # Enable automatic resizing of avatar images (default: true)
     # Set to false to use original image size and (May help preserve quality)
@@ -43,13 +43,13 @@ custom404Message = "Sorry, the page you are looking for could not be found. Just
     # Home page specific avatar (optional - falls back to general avatar if not set)
     [params.avatar.home]
       # url = "https://example.com/home-avatar.jpg"
-       assetPath = "images/home-avatar.png"
+       assetPath = "/images/Hey.png"
        # enableResize = true # Override general setting for home page
 
     # About page specific avatar (optional - falls back to general avatar if not set)
     [params.avatar.about]
       # url = "https://example.com/about-avatar.jpg"
-       assetPath = "images/20250802_151039.jpg"
+       assetPath = "/images/20250802_151039.jpg"
       # enableResize = false  # Override general setting for about page
 
   # Buy Me a Coffee Widget
