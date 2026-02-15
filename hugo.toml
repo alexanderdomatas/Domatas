@@ -9,7 +9,7 @@ theme = 'mana'
 [params]
   description = "Domatas' Domain"
   author = "Alex Domatas"
-  favicon = "/favicon/logo-transparent/favicon.ico"
+  favicon = "/favicon/favicon.ico"
   footerText = "Hey I know theres not much here, give a guy a break! sheeesh"
   heroTitleLine1 = "Domatas Domain"
   heroTitleLine2 = "Made it to see if I could!"
