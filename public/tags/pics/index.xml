@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pics on Domatas.com</title>
+    <link>http://localhost:1313/tags/pics/</link>
+    <description>Recent content in Pics on Domatas.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photography is an art</title>
+      <link>http://localhost:1313/posts/one/gallery/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/one/gallery/</guid>
+      <description>&lt;p&gt;And I&amp;rsquo;m not typically any good at it! But here&amp;rsquo;s some photos I&amp;rsquo;ve taken that I really like.&#xA;The First photo is of my car, when we went camping a few years back, theres just something about sunsets that make a photo of nearly anything look nice!&#xA;The Second one was taken in golden BC in the wee morning hours at a bachelor party! Sunrise in the mountains sure is something to behold!&#xA;And the third one is of a lilac tree in bloom! That particular tree only seems to bloom for like a weekend a year, I was super excited I caught it!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
