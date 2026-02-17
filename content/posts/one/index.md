@@ -1,9 +1,14 @@
 ---
 title: "Photography is an art"
-date: 2026-01-01
-tags: ["Pics", "Scenic", "Alex"]
-categories: ["Blog"]
-author: "Alexander Domatas"
+date: 2026-02-16
+draft: false
+description: "Some times things are just worth photographing"
+tags: ["photos", "scenery", "blog"]
+type: gallery
+no_toc: true
+Image: "/images/2.jpg"
+# Uncomment and set to show a thumbnail on the posts listing page:
+# image: "01-cover.jpg"
 ---
 
 And I'm not typically any good at it! But here's some photos I've taken that I really like.

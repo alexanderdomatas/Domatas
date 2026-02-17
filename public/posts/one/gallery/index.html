@@ -181,6 +181,9 @@
 
 
 
+
+<link rel="stylesheet" href="/css/gallery.css">
+
   </head>
   <body class="flex flex-col min-h-screen">
     <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
@@ -369,22 +372,19 @@
 
     <main id="main-content" class="flex-1" role="main">
       
-  <div class="single-post-wrapper">
-    <article class="single-post">
+<div class="single-post-wrapper">
+  <article class="single-post">
+
+    
+    
+
+    
+    <header class="post-header">
+      <h1 class="post-title-main">Photography is an art</h1>
+
       
 
-
-
-
-
-
-
-      <header class="post-header">
-        <h1 class="post-title-main">Photography is an art</h1>
-
-        
-
-        <div class="post-meta">
+      <div class="post-meta">
   <div class="post-meta-info">
     <time datetime="2026-01-01T00:00:00Z" class="post-date">
       <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -440,90 +440,73 @@
   
 </div>
 
-      </header>
+    </header>
 
-      <div class="post-content-main">
-        <p>And I&rsquo;m not typically any good at it! But here&rsquo;s some photos I&rsquo;ve taken that I really like.
+    
+    <div class="post-content-main">
+      <p>And I&rsquo;m not typically any good at it! But here&rsquo;s some photos I&rsquo;ve taken that I really like.
 The First photo is of my car, when we went camping a few years back, theres just something about sunsets that make a photo of nearly anything look nice!
 The Second one was taken in golden BC in the wee morning hours at a bachelor party! Sunrise in the mountains sure is something to behold!
 And the third one is of a lilac tree in bloom! That particular tree only seems to bloom for like a weekend a year, I was super excited I caught it!</p>
 
-      </div>
-
-      
-        <footer class="post-footer">
-          <div class="post-tags-footer">
-            <span class="tags-label">Tags:</span>
-            
-              <a href="/tags/pics" class="post-tag">Pics</a>
-            
-              <a href="/tags/scenic" class="post-tag">Scenic</a>
-            
-              <a href="/tags/alex" class="post-tag">Alex</a>
-            
-          </div>
-        </footer>
-      
-
-
-      <nav class="post-navigation" aria-label="Post navigation">
-        
-          <a
-            href="/posts/sample-audio/"
-            class="nav-link nav-prev"
-            aria-label="Previous post: This movie kicked ass!">
-            <span class="nav-label">Previous</span>
-            <span class="nav-title">This movie kicked ass!</span>
-          </a>
-        
-
-        
-      </nav>
-    </article>
+    </div>
 
     
-  <aside class="post-toc" id="post-toc" aria-label="Table of contents">
-    <button
-      class="toc-toggle"
-      id="toc-toggle"
-      aria-expanded="true"
-      aria-controls="toc-content"
-      aria-label="Toggle table of contents">
-      <svg
-        class="toc-burger-icon"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-      <span class="toc-toggle-text">Table of Contents</span>
-      <svg
-        class="toc-chevron-icon"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-    </button>
-    <div class="toc-content" id="toc-content">
-      <nav class="toc-nav" aria-label="Table of contents">
-        <nav id="TableOfContents"></nav>
-      </nav>
-    </div>
-  </aside>
+    
+      <footer class="post-footer">
+        <div class="post-tags-footer">
+          <span class="tags-label">Tags:</span>
+          
+            <a href="/tags/pics" class="post-tag">Pics</a>
+          
+            <a href="/tags/scenic" class="post-tag">Scenic</a>
+          
+            <a href="/tags/alex" class="post-tag">Alex</a>
+          
+        </div>
+      </footer>
+    
+
+    
+    <nav class="post-navigation" aria-label="Post navigation">
+      
+        <a href="/posts/sample-audio/" class="nav-link nav-prev" aria-label="Previous post: This movie kicked ass!">
+          <span class="nav-label">Previous</span>
+          <span class="nav-title">This movie kicked ass!</span>
+        </a>
+      
+      
+        <a href="/posts/my-trip-to-tokyo/" class="nav-link nav-next" aria-label="Next post: some random photos to test this thing">
+          <span class="nav-label">Next</span>
+          <span class="nav-title">some random photos to test this thing</span>
+        </a>
+      
+    </nav>
+
+  </article>
+
+  
+
+</div>
 
 
-  </div>
+<div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Full screen photo viewer" hidden>
+  <button class="gallery-lightbox-close" id="lb-close" aria-label="Close">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="gallery-lightbox-prev" id="lb-prev" aria-label="Previous photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="gallery-lightbox-next" id="lb-next" aria-label="Next photo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <figure class="gallery-lightbox-figure">
+    <img id="lb-img" src="" alt="" />
+    <figcaption id="lb-caption" class="gallery-lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<script src="/js/gallery.js"></script>
 
     </main>
 

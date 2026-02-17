@@ -7,6 +7,41 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/tags/alex/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/photos/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/my-trip-to-tokyo/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/categories/about/</loc>
     <lastmod>2026-02-10T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -17,22 +52,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-10T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/alex/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/categories/blog/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/one/gallery/</loc>
+    <loc>http://localhost:1313/posts/one/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -42,43 +67,33 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/tags/scenic/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/categories/audio/</loc>
-    <lastmod>2024-02-25T13:16:19+02:00</lastmod>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/movies/</loc>
-    <lastmod>2024-02-25T13:16:19+02:00</lastmod>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/spotify/</loc>
-    <lastmod>2024-02-25T13:16:19+02:00</lastmod>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/sample-audio/</loc>
-    <lastmod>2024-02-25T13:16:19+02:00</lastmod>
+    <loc>http://localhost:1313/posts/kpopdemonhunters/</loc>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/tunes/</loc>
-    <lastmod>2024-02-25T13:16:19+02:00</lastmod>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

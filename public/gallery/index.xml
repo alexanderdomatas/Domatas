@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Galleries on Domatas.com</title>
+    <title>Gallery on Domatas.com</title>
     <link>http://localhost:1313/gallery/</link>
-    <description>Recent content in Galleries on Domatas.com</description>
+    <description>Recent content in Gallery on Domatas.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 16 Feb 2026 21:47:23 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Trip to Tokyo</title>
+      <link>http://localhost:1313/gallery/my-trip-to-tokyo/</link>
+      <pubDate>Mon, 16 Feb 2026 21:47:23 -0700</pubDate>
+      <guid>http://localhost:1313/gallery/my-trip-to-tokyo/</guid>
+      <description>&lt;p&gt;Add a description of this gallery here. This text appears below the image grid on the gallery page.&lt;/p&gt;&#xA;&lt;!-- Drop your image files (jpg, jpeg, png, gif, webp) alongside this index.md file.&#xA;     Hugo will pick them up automatically as page resources.&#xA;&#xA;     Naming tip: prefix images with numbers to control sort order:&#xA;       01-opening-shot.jpg&#xA;       02-crowd.jpg&#xA;       03-sunset.jpg&#xA;--&gt;</description>
+    </item>
+    <item>
+      <title>My First Gallery</title>
+      <link>http://localhost:1313/gallery/my-first-gallery/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/gallery/my-first-gallery/</guid>
+      <description>&lt;p&gt;This text appears below the photo slider, in the same spot as post body content.&#xA;You can write as much or as little as you like here — or leave it blank and&#xA;let the photos speak for themselves.&lt;/p&gt;&#xA;&lt;p&gt;Drop your image files in this same folder (&lt;code&gt;content/gallery/my-first-gallery/&lt;/code&gt;)&#xA;alongside this &lt;code&gt;index.md&lt;/code&gt;. They&amp;rsquo;ll appear in the slider automatically, sorted&#xA;alphabetically — so prefix filenames with numbers to control the order:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;01-opening.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;02-detail.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;03-closing.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>

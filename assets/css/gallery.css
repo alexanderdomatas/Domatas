@@ -1,0 +1,406 @@
+/*
+  assets/css/gallery.css
+  ──────────────────────────────────────────────────────────────────────────────
+  Gallery feature styles for the Mana theme.
+
+  How to include:
+    Option A (recommended) – add ONE line to your site's hugo.toml:
+
+        [params]
+          css_modules = ["css/gallery.css"]   # if Mana theme supports this
+          
+    Option B – add a <link> tag in your site's layouts/partials/head.html
+    override (create the file at that path in your site root):
+
+        <link rel="stylesheet" href="/css/gallery.css">
+
+    Then copy THIS file to:  static/css/gallery.css
+
+    Option C – paste the contents into your existing site CSS.
+  ──────────────────────────────────────────────────────────────────────────────
+*/
+
+/* ── Variables (mirror Mana theme palette where possible) ─────────────────── */
+:root {
+  --gallery-gap: 0.75rem;
+  --gallery-cols: 3;
+  --gallery-radius: 6px;
+  --gallery-overlay: rgba(0, 0, 0, 0.85);
+  --gallery-accent: #BD5FFF;        /* matches Mana's default Buy-Me-a-Coffee colour */
+  --gallery-text: #e2e8f0;
+  --gallery-meta: #94a3b8;
+  --gallery-bg-card: #1e293b;
+  --gallery-bg-empty: #0f172a;
+  --gallery-transition: 0.2s ease;
+}
+
+/* ── Gallery single page ───────────────────────────────────────────────────── */
+.gallery-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.gallery-header {
+  margin-bottom: 2rem;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gallery-text);
+  margin: 0 0 0.5rem;
+}
+
+.gallery-description {
+  color: var(--gallery-meta);
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem;
+}
+
+.gallery-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--gallery-meta);
+}
+
+.gallery-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.gallery-tags .tag {
+  background: rgba(189, 95, 255, 0.15);
+  color: var(--gallery-accent);
+  border: 1px solid rgba(189, 95, 255, 0.35);
+  border-radius: 4px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background var(--gallery-transition);
+}
+
+.gallery-tags .tag:hover {
+  background: rgba(189, 95, 255, 0.3);
+}
+
+/* ── Image grid ────────────────────────────────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--gallery-cols), 1fr);
+  gap: var(--gallery-gap);
+  margin-bottom: 2rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  :root { --gallery-cols: 2; }
+}
+@media (max-width: 540px) {
+  :root { --gallery-cols: 1; }
+}
+
+.gallery-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--gallery-radius);
+  background: var(--gallery-bg-card);
+  cursor: zoom-in;
+  text-decoration: none;
+  aspect-ratio: 3 / 2;        /* keeps all tiles the same height */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--gallery-transition), filter var(--gallery-transition);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.85);
+}
+
+.gallery-item-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 1.25rem 0.6rem 0.5rem;
+  opacity: 0;
+  transition: opacity var(--gallery-transition);
+  pointer-events: none;
+}
+
+.gallery-item:hover .gallery-item-caption,
+.gallery-item:focus .gallery-item-caption {
+  opacity: 1;
+}
+
+/* Focus ring for keyboard nav */
+.gallery-item:focus-visible {
+  outline: 2px solid var(--gallery-accent);
+  outline-offset: 2px;
+}
+
+.gallery-empty {
+  color: var(--gallery-meta);
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.gallery-body {
+  margin-top: 1.5rem;
+  color: var(--gallery-text);
+  line-height: 1.7;
+}
+
+/* ── Gallery list (section index) ──────────────────────────────────────────── */
+.gallery-list-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.gallery-list-header {
+  margin-bottom: 2rem;
+}
+
+.gallery-list-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gallery-text);
+  margin: 0 0 0.5rem;
+}
+
+.gallery-list-intro {
+  color: var(--gallery-meta);
+}
+
+.gallery-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .gallery-list-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .gallery-list-grid { grid-template-columns: 1fr; }
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--gallery-bg-card);
+  border-radius: var(--gallery-radius);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform var(--gallery-transition), box-shadow var(--gallery-transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.gallery-card-thumb {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--gallery-bg-empty);
+}
+
+.gallery-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--gallery-transition);
+}
+
+.gallery-card:hover .gallery-card-thumb img {
+  transform: scale(1.04);
+}
+
+.gallery-card-thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gallery-meta);
+  font-size: 0.85rem;
+}
+
+.gallery-card-body {
+  padding: 0.85rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.gallery-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gallery-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.gallery-card-desc {
+  font-size: 0.85rem;
+  color: var(--gallery-meta);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gallery-card-count {
+  font-size: 0.78rem;
+  color: var(--gallery-accent);
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+/* ── Lightbox ──────────────────────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--gallery-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* animation */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Remove the [hidden] attribute behavior so we can animate */
+.lightbox[hidden] {
+  display: flex !important;    /* override UA [hidden] display:none */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-figure {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  /* slide animation */
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+#lightbox-img.is-animating {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.lightbox-caption {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 60ch;
+}
+
+/* Shared button base */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: fixed;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--gallery-transition), transform var(--gallery-transition);
+  z-index: 10000;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255,255,255,0.22);
+  transform: scale(1.1);
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1rem;
+}
+
+.lightbox-prev {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-next {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hide prev/next on very small screens to avoid overlap */
+@media (max-width: 480px) {
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+  .lightbox-prev { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+  .lightbox-prev:hover,
+  .lightbox-next:hover { transform: scale(1.1); }
+}

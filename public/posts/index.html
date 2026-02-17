@@ -157,6 +157,9 @@
 
 
 
+
+<link rel="stylesheet" href="/css/gallery.css">
+
   </head>
   <body class="flex flex-col min-h-screen">
     <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
@@ -356,25 +359,12 @@
       
         
       
-    
-  
-    
-      
-        
-      
-        
-      
-        
-      
         
       
     
   
   
   
-  
-    
-    
   
     
     
@@ -389,7 +379,7 @@
       </h1>
       
       <div class="list-count">
-  <span id="filtered-count">2</span>
+  <span id="filtered-count">3</span>
   posts
   
 </div>
@@ -444,11 +434,7 @@
             
               <span data-tag="Movies">Movies</span>
             
-              <span data-tag="Pics">Pics</span>
-            
-              <span data-tag="Scenic">Scenic</span>
-            
-              <span data-tag="Spotify">Spotify</span>
+              <span data-tag="spotify">spotify</span>
             
               <span data-tag="Tunes">Tunes</span>
             
@@ -463,9 +449,7 @@
             aria-label="Filter by year and month">
             <option value="">All Dates</option>
             
-              <option value="2024 February">2024 February</option>
-            
-              <option value="2026 January">2026 January</option>
+              <option value="2025 February">2025 February</option>
             
           </select>
         </div>
@@ -490,29 +474,41 @@
 
 <article
   class="post-card"
-  data-post-url="/posts/one/gallery/"
-  data-year-month="2026 January"
-  data-tags="Pics,Scenic,Alex">
+  data-post-url="/posts/fitness-journey/"
+  data-year-month="2026 February"
+  data-tags="fitness,health,Alex">
   
 
 
 
+
+  <div class="post-image">
+    <a href="/posts/fitness-journey/" onclick="event.stopPropagation();" aria-label="Read My Fitness Journey">
+      <img
+        src="/images/fitness.jpg"
+        alt="
+          Mistakes were made, fixes are in progress
+        "
+        loading="lazy"
+        width="1200"
+        height="630">
+    </a>
+  </div>
 
 
 
 
   <div class="post-content">
     <h3 class="post-title">
-      <a href="/posts/one/gallery/" onclick="event.stopPropagation();">Photography is an art</a>
+      <a href="/posts/fitness-journey/" onclick="event.stopPropagation();">My Fitness Journey</a>
     </h3>
 
     
-      <p class="post-description"><p>And I&rsquo;m not typically any good at it! But here&rsquo;s some photos I&rsquo;ve taken that I really like.
-The First photo is of my car, when we …</p></p>
+      <p class="post-description">Mistakes were made, fixes are in progress</p>
     
 
     <div class="post-meta-inline">
-  <time datetime="2026-01-01T00:00:00Z" class="post-date">
+  <time datetime="2026-02-16T00:00:00Z" class="post-date">
     <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         stroke-linecap="round"
@@ -520,7 +516,128 @@ The First photo is of my car, when we …</p></p>
         stroke-width="2"
         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
     </svg>
-    January 1, 2026
+    February 16, 2026
+  </time>
+
+  
+    <span class="meta-separator">•</span>
+    <span class="post-word-count">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      </svg>
+      530 words
+    </span>
+  
+
+  
+    <span class="meta-separator">•</span>
+    <span class="post-reading-time">
+      <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      3 min
+    </span>
+  
+</div>
+
+
+    
+
+  <div class="post-tags">
+    
+      
+        <a
+          href="/tags/fitness"
+          class="post-tag"
+          onclick="event.stopPropagation();"
+          >fitness</a
+        >
+      
+        <a
+          href="/tags/health"
+          class="post-tag"
+          onclick="event.stopPropagation();"
+          >health</a
+        >
+      
+        <a
+          href="/tags/alex"
+          class="post-tag"
+          onclick="event.stopPropagation();"
+          >Alex</a
+        >
+      
+    
+  </div>
+
+
+  </div>
+</article>
+
+      
+        
+        
+          
+        
+        
+
+
+
+
+
+<article
+  class="post-card"
+  data-post-url="/posts/one/"
+  data-year-month="2026 February"
+  data-tags="photos,scenery,blog">
+  
+
+
+
+
+  <div class="post-image">
+    <a href="/posts/one/" onclick="event.stopPropagation();" aria-label="Read Photography is an art">
+      <img
+        src="/images/2.jpg"
+        alt="
+          Some times things are just worth photographing
+        "
+        loading="lazy"
+        width="1200"
+        height="630">
+    </a>
+  </div>
+
+
+
+
+  <div class="post-content">
+    <h3 class="post-title">
+      <a href="/posts/one/" onclick="event.stopPropagation();">Photography is an art</a>
+    </h3>
+
+    
+      <p class="post-description">Some times things are just worth photographing</p>
+    
+
+    <div class="post-meta-inline">
+  <time datetime="2026-02-16T00:00:00Z" class="post-date">
+    <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+    </svg>
+    February 16, 2026
   </time>
 
   
@@ -559,24 +676,24 @@ The First photo is of my car, when we …</p></p>
     
       
         <a
-          href="/tags/pics"
+          href="/tags/photos"
           class="post-tag"
           onclick="event.stopPropagation();"
-          >Pics</a
+          >photos</a
         >
       
         <a
-          href="/tags/scenic"
+          href="/tags/scenery"
           class="post-tag"
           onclick="event.stopPropagation();"
-          >Scenic</a
+          >scenery</a
         >
       
         <a
-          href="/tags/alex"
+          href="/tags/blog"
           class="post-tag"
           onclick="event.stopPropagation();"
-          >Alex</a
+          >blog</a
         >
       
     
@@ -599,28 +716,42 @@ The First photo is of my car, when we …</p></p>
 
 <article
   class="post-card"
-  data-post-url="/posts/sample-audio/"
-  data-year-month="2024 February"
-  data-tags="Tunes,Movies,Spotify,Alex">
+  data-post-url="/posts/kpopdemonhunters/"
+  data-year-month="2025 February"
+  data-tags="Tunes,Movies,spotify,Alex">
   
 
 
 
+
+  <div class="post-image">
+    <a href="/posts/kpopdemonhunters/" onclick="event.stopPropagation();" aria-label="Read This movie kicked ass!">
+      <img
+        src="/images/kpop.jpg"
+        alt="
+          This movie kicked ass! - Featured image
+        "
+        loading="lazy"
+        width="1200"
+        height="630">
+    </a>
+  </div>
 
 
 
 
   <div class="post-content">
     <h3 class="post-title">
-      <a href="/posts/sample-audio/" onclick="event.stopPropagation();">This movie kicked ass!</a>
+      <a href="/posts/kpopdemonhunters/" onclick="event.stopPropagation();">This movie kicked ass!</a>
     </h3>
 
     
-      <p class="post-description"><p>I watched the movie Kpop Demon hunters the otherday with some pals of mine. I didn&rsquo;t expect it to hit me in the ol emotions so hard. Any way …</p></p>
+      <p class="post-description"><p>image
+I watched the movie Kpop Demon hunters the otherday with some pals of mine. I didn&rsquo;t expect it to hit me in the ol emotions so hard. Any …</p></p>
     
 
     <div class="post-meta-inline">
-  <time datetime="2024-02-25T13:16:19&#43;02:00" class="post-date">
+  <time datetime="2025-02-25T00:00:00Z" class="post-date">
     <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         stroke-linecap="round"
@@ -628,7 +759,7 @@ The First photo is of my car, when we …</p></p>
         stroke-width="2"
         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
     </svg>
-    February 25, 2024
+    February 25, 2025
   </time>
 
   
@@ -641,7 +772,7 @@ The First photo is of my car, when we …</p></p>
           stroke-width="2"
           d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
       </svg>
-      36 words
+      37 words
     </span>
   
 
@@ -684,7 +815,7 @@ The First photo is of my car, when we …</p></p>
           href="/tags/spotify"
           class="post-tag"
           onclick="event.stopPropagation();"
-          >Spotify</a
+          >spotify</a
         >
       
     

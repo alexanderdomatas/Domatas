@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sample on Domatas.com</title>
+    <link>http://localhost:1313/tags/sample/</link>
+    <description>Recent content in Sample on Domatas.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sample/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Gallery</title>
+      <link>http://localhost:1313/posts/fitness-journey/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fitness-journey/</guid>
+      <description>&lt;p&gt;This text appears below the photo slider, in the same spot as post body content.&#xA;You can write as much or as little as you like here — or leave it blank and&#xA;let the photos speak for themselves.&lt;/p&gt;&#xA;&lt;p&gt;Drop your image files in this same folder (&lt;code&gt;content/gallery/my-first-gallery/&lt;/code&gt;)&#xA;alongside this &lt;code&gt;index.md&lt;/code&gt;. They&amp;rsquo;ll appear in the slider automatically, sorted&#xA;alphabetically — so prefix filenames with numbers to control the order:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;01-opening.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;02-detail.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;03-closing.jpg&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -17,11 +17,11 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
-<title>Galleries | Domatas.com</title>
+<title>Gallery | Domatas.com</title>
 <meta
   name="description"
   content="
-    
+    A collection of photo galleries.
   
   ">
 
@@ -38,13 +38,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Galleries | Domatas.com">
-<meta property="og:description" content="">
+<meta property="og:title" content="Gallery | Domatas.com">
+<meta property="og:description" content="A collection of photo galleries.">
 <meta property="og:url" content="http://localhost:1313/gallery/">
 <meta property="og:site_name" content="Domatas.com">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Galleries | Domatas.com">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Gallery | Domatas.com">
+<meta name="twitter:description" content="A collection of photo galleries.">
 
 
 
@@ -157,6 +157,9 @@
 
 
 
+
+<link rel="stylesheet" href="/css/gallery.css">
+
   </head>
   <body class="flex flex-col min-h-screen">
     <a href="#main-content" class="skip-to-main" aria-label="Skip to main content"
@@ -199,7 +202,7 @@
   
     <li class="menu-item">
       <a
-        href="/"
+        href="/posts/"
         class="menu-link ">
         Posts
       </a>
@@ -283,7 +286,7 @@
   
     <li class="menu-item">
       <a
-        href="/"
+        href="/posts/"
         class="menu-link ">
         Posts
       </a>
@@ -345,115 +348,45 @@
 
     <main id="main-content" class="flex-1" role="main">
       
-  
-  
-  
-  
-  
-  
-  
+<section class="gallery-list-page">
 
-
-  <div class="list-container">
-    <header class="list-header">
-      <h1 class="list-title">
-        <span class="list-title-line2">POSTS</span>
-      </h1>
-      
-      <div class="list-count">
-  <span id="filtered-count">0</span>
-  posts
-  
-</div>
-
-
-    </header>
+  <header class="gallery-list-header">
+    <h1>Gallery</h1>
+  </header>
+  <div class="gallery-list-grid">
 
     
-    <div class="filter-accordion">
-      <button
-        class="filter-toggle-btn"
-        id="filter-toggle-btn"
-        aria-expanded="false"
-        aria-label="Toggle filters"
-        aria-controls="posts-filter-content">
-        <span class="filter-toggle-text">Filters</span>
-        <svg
-          class="filter-toggle-icon"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </button>
-      <div class="posts-filter" id="posts-filter-content">
-        <div class="filter-group filter-group-tags">
-          <label class="filter-label" for="tag-search-input">Tags</label>
-          <div class="tag-search-container">
-            <input
-              type="text"
-              id="tag-search-input"
-              class="tag-search-input"
-              placeholder="Search for tags..."
-              aria-label="Search for tags">
-            <div
-              id="tag-search-results"
-              class="tag-search-results"
-              role="listbox"
-              aria-label="Tag search results"></div>
-          </div>
-          <div class="filter-tags" id="selected-tags-container">
-            
-          </div>
-          <div id="all-tags-data" style="display: none;">
-            
-          </div>
-        </div>
 
-        <div class="filter-group">
-          <label for="filter-year-month" class="filter-label">Year & Month</label>
-          <select
-            id="filter-year-month"
-            class="filter-select"
-            aria-label="Filter by year and month">
-            <option value="">All Dates</option>
-            
-          </select>
-        </div>
-
-        <button id="clear-filters" class="filter-clear-btn" aria-label="Clear all filters">
-          Clear Filters
-        </button>
+    <a class="gallery-card" href="/gallery/my-trip-to-tokyo/">
+      <div class="gallery-card-thumb">
+        <img src="/gallery/my-trip-to-tokyo/1.jpg" alt="My Trip to Tokyo" loading="lazy" />
       </div>
-    </div>
-
-    <div class="posts-list" id="posts-container">
-      
-    </div>
-
-    
-    
-  
-  
-  
-  
-  
-  </nav>
-
-
-
+      <div class="gallery-card-body">
+        <h2 class="gallery-card-title">My Trip to Tokyo</h2>
+        <p class="gallery-card-desc">some photos i took</p>
+        <span class="gallery-card-count">
+          3 photos
+        </span>
+      </div>
+    </a>
 
     
-    <div class="tag-nav-links">
-  <a href="/" class="tag-nav-link">Back to Home</a>
-</div>
 
+    <a class="gallery-card" href="/gallery/my-first-gallery/">
+      <div class="gallery-card-thumb">
+        <img src="/gallery/my-first-gallery/20251224_200759.jpg" alt="My First Gallery" loading="lazy" />
+      </div>
+      <div class="gallery-card-body">
+        <h2 class="gallery-card-title">My First Gallery</h2>
+        <p class="gallery-card-desc">A sample gallery post — drop your photos alongside this file.</p>
+        <span class="gallery-card-count">
+          3 photos
+        </span>
+      </div>
+    </a>
   </div>
+
+</section>
 
     </main>
 

@@ -6,13 +6,41 @@
     <description>Recent content in Tags on Domatas.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 21:47:23 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alex</title>
       <link>http://localhost:1313/tags/alex/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Feb 2026 21:47:23 -0700</pubDate>
       <guid>http://localhost:1313/tags/alex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/tags/blog/</link>
+      <pubDate>Mon, 16 Feb 2026 21:47:23 -0700</pubDate>
+      <guid>http://localhost:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photos</title>
+      <link>http://localhost:1313/tags/photos/</link>
+      <pubDate>Mon, 16 Feb 2026 21:47:23 -0700</pubDate>
+      <guid>http://localhost:1313/tags/photos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fitness</title>
+      <link>http://localhost:1313/tags/fitness/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fitness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Health</title>
+      <link>http://localhost:1313/tags/health/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/health/</guid>
       <description></description>
     </item>
     <item>
@@ -32,22 +60,36 @@
     <item>
       <title>Movies</title>
       <link>http://localhost:1313/tags/movies/</link>
-      <pubDate>Sun, 25 Feb 2024 13:16:19 +0200</pubDate>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/movies/</guid>
       <description></description>
     </item>
     <item>
       <title>Spotify</title>
       <link>http://localhost:1313/tags/spotify/</link>
-      <pubDate>Sun, 25 Feb 2024 13:16:19 +0200</pubDate>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/spotify/</guid>
       <description></description>
     </item>
     <item>
       <title>Tunes</title>
       <link>http://localhost:1313/tags/tunes/</link>
-      <pubDate>Sun, 25 Feb 2024 13:16:19 +0200</pubDate>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/tunes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>http://localhost:1313/tags/photography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sample</title>
+      <link>http://localhost:1313/tags/sample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sample/</guid>
       <description></description>
     </item>
   </channel>
