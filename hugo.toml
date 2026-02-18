@@ -2,14 +2,17 @@ baseURL = 'https://domatas.com'
 languageCode = 'en-us'
 title = 'Domatas.com'
 theme = 'mana'
+tags = ["blog", "Alex", "Domatas", "Alexanderdomatas", "Alexander", "dark mode", "popular", "edmonton"]
 
+
+enableRobotsTXT = true
 
 
 # Theme configuration
 [params]
   description = "Domatas' Domain"
   author = "Alex Domatas"
-  favicon = "/favicon/favicon.ico"
+  favicon = "favicon/favicon.ico"
   footerText = "Hey I know theres not much here, give a guy a break! sheeesh"
   heroTitleLine1 = "Domatas Domain"
   heroTitleLine2 = "Made it to see if I could!"
@@ -143,7 +146,7 @@ weight = 40
 
 # Output formats for search index
 [outputs]
-  home = ["HTML", "JSON"]
+  home = ["HTML", "JSON", "RSS"]
 
 # Sitemap configuration for SEO
 [sitemap]

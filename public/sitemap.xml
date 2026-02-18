@@ -8,37 +8,57 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/alex/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/fitness/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/health/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/fitness-journey/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/one/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/photos/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/posts/my-trip-to-tokyo/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <loc>http://localhost:1313/tags/scenery/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-02-16T21:47:23-07:00</lastmod>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -49,26 +69,6 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2026-02-10T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/categories/blog/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/posts/one/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/pics/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/scenic/</loc>
-    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>

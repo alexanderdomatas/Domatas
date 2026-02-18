@@ -6,28 +6,21 @@
     <description>Recent content in Alex on Domatas.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Feb 2026 21:47:23 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/alex/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>some random photos to test this thing</title>
-      <link>http://localhost:1313/posts/my-trip-to-tokyo/</link>
-      <pubDate>Mon, 16 Feb 2026 21:47:23 -0700</pubDate>
-      <guid>http://localhost:1313/posts/my-trip-to-tokyo/</guid>
-      <description>&lt;p&gt;Add a description of this gallery here. This text appears below the image grid on the gallery page.&lt;/p&gt;&#xA;&lt;!-- Drop your image files (jpg, jpeg, png, gif, webp) alongside this index.md file.&#xA;     Hugo will pick them up automatically as page resources.&#xA;&#xA;     Naming tip: prefix images with numbers to control sort order:&#xA;       01-opening-shot.jpg&#xA;       02-crowd.jpg&#xA;       03-sunset.jpg&#xA;--&gt;</description>
-    </item>
-    <item>
-      <title>Photography is an art</title>
-      <link>http://localhost:1313/posts/one/</link>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/one/</guid>
-      <description>&lt;p&gt;And I&amp;rsquo;m not typically any good at it! But here&amp;rsquo;s some photos I&amp;rsquo;ve taken that I really like.&#xA;The First photo is of my car, when we went camping a few years back, theres just something about sunsets that make a photo of nearly anything look nice!&#xA;The Second one was taken in golden BC in the wee morning hours at a bachelor party! Sunrise in the mountains sure is something to behold!&#xA;And the third one is of a lilac tree in bloom! That particular tree only seems to bloom for like a weekend a year, I was super excited I caught it!&lt;/p&gt;</description>
+      <title>My Fitness Journey</title>
+      <link>http://localhost:1313/posts/fitness-journey/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fitness-journey/</guid>
+      <description>&lt;p&gt;So, 2025 was a big year for me. I had spent most of my 20&amp;rsquo;s very much living in excess. I was smoking a lot of cigarettes, and I was eating and drinking a lot. At some point the batteries in my scale had died, and so the highest peak weight I had reached was about 320lbs, buuut I think I must have reached closer to 330 or maybe even 340.&lt;/p&gt;</description>
     </item>
     <item>
       <title>This movie kicked ass!</title>
       <link>http://localhost:1313/posts/kpopdemonhunters/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/kpopdemonhunters/</guid>
-      <description>&lt;p&gt;image&#xA;I watched the movie Kpop Demon hunters the otherday with some pals of mine. I didn&amp;rsquo;t expect it to hit me in the ol emotions so hard. Any way this is a banger from the soundtrack!&lt;/p&gt;</description>
+      <description>&lt;p&gt;I watched the movie Kpop Demon hunters the otherday with some pals of mine. I didn&amp;rsquo;t expect it to hit me in the ol emotions so hard. Some song highlights for me are &amp;ldquo;free&amp;rdquo; and &amp;ldquo;what it sounds like&amp;rdquo;. If you haven&amp;rsquo;t watched it, I&amp;rsquo;d whole heartedly recommend you do!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

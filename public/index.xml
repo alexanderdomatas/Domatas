@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domatas.com</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Domatas.com</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hey, welcome to my lil blogy blog, I&amp;rsquo;ll be totally honest and upfront here with ya, I have no idea what to blog about! You see i mainly wanted to make a website, just to prove to myself i could get one all up and on the ol internets. So here it is!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Fitness Journey</title>
+      <link>http://localhost:1313/posts/fitness-journey/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fitness-journey/</guid>
+      <description>&lt;p&gt;So, 2025 was a big year for me. I had spent most of my 20&amp;rsquo;s very much living in excess. I was smoking a lot of cigarettes, and I was eating and drinking a lot. At some point the batteries in my scale had died, and so the highest peak weight I had reached was about 320lbs, buuut I think I must have reached closer to 330 or maybe even 340.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Photography is an art</title>
+      <link>http://localhost:1313/posts/one/</link>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/one/</guid>
+      <description>&lt;p&gt;And I&amp;rsquo;m not typically any good at it! But here&amp;rsquo;s some photos I&amp;rsquo;ve taken that I really like.&#xA;The First photo is of my car, when we went camping a few years back, theres just something about sunsets that make a photo of nearly anything look nice!&#xA;The Second one was taken in golden BC in the wee morning hours at a bachelor party! Sunrise in the mountains sure is something to behold!&#xA;And the third one is of a lilac tree in bloom! That particular tree only seems to bloom for like a weekend a year, I was super excited I caught it!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This movie kicked ass!</title>
+      <link>http://localhost:1313/posts/kpopdemonhunters/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kpopdemonhunters/</guid>
+      <description>&lt;p&gt;I watched the movie Kpop Demon hunters the otherday with some pals of mine. I didn&amp;rsquo;t expect it to hit me in the ol emotions so hard. Some song highlights for me are &amp;ldquo;free&amp;rdquo; and &amp;ldquo;what it sounds like&amp;rdquo;. If you haven&amp;rsquo;t watched it, I&amp;rsquo;d whole heartedly recommend you do!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
