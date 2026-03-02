@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edmonton Summer 2026 — The Complete Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #9D4EDD;
+    --primary-bright: #C084FC;
+    --primary-dim: rgba(157,78,221,0.14);
+    --primary-border: rgba(157,78,221,0.22);
+    --cream: #EDE8F5;
+    --dark: #07050D;
+    --mid: #0F0A1C;
+    --card: #140D26;
+    --card2: #1C1434;
+    --border: rgba(157,78,221,0.18);
+    --dim: #6B6480;
+    --green: #6FD48B;
+    --blue: #7AB4FF;
+    --purple: #C084FC;
+    --magenta: #E879F9;
+    --red: #FF8080;
+    --orange: #FFA040;
+    --pink: #F472B6;
+    --teal: #5FD4C0;
+    --gold: #E8B94F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--dark); color: var(--cream); font-family: 'Barlow', sans-serif; font-weight: 300; overflow-x: hidden; }
+  a { color: inherit; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 60px 20px; position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 80% 65% at 25% 35%, rgba(157,78,221,0.18) 0%, transparent 65%),
+                radial-gradient(ellipse 55% 55% at 80% 75%, rgba(192,132,252,0.10) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 60% 10%, rgba(232,121,249,0.07) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(rgba(157,78,221,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(157,78,221,0.05) 1px, transparent 1px);
+    background-size: 55px 55px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 960px; }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 6px;
+    text-transform: uppercase; color: var(--primary-bright); margin-bottom: 20px;
+    animation: fadeUp .7s ease both;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(70px, 15vw, 170px);
+    line-height: .88; color: var(--cream); animation: fadeUp .7s .08s ease both; letter-spacing: 2px;
+  }
+  .hero h1 span { color: var(--primary-bright); display: block; }
+  .hero-sub {
+    margin-top: 26px; font-size: 15px; color: #8878aa; letter-spacing: 1.5px;
+    animation: fadeUp .7s .16s ease both;
+  }
+  .hero-tags {
+    margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    animation: fadeUp .7s .24s ease both;
+  }
+  .hero-tag {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; padding: 6px 16px; border: 1px solid var(--border);
+    color: var(--primary-bright); border-radius: 30px;
+    background: rgba(157,78,221,0.06);
+  }
+  .scroll-arrow {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    color: var(--primary-bright); font-size: 22px; animation: bob 2.2s ease-in-out infinite;
+  }
+
+  /* ─── STICKY NAV ─── */
+  .sticky-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(7,5,13,.96); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    display: flex; justify-content: center; overflow-x: auto; gap: 0;
+  }
+  .nav-tab {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--dim); padding: 16px 18px;
+    text-decoration: none; border-bottom: 2px solid transparent; white-space: nowrap;
+    transition: all .2s;
+  }
+  .nav-tab:hover { color: var(--primary-bright); border-bottom-color: var(--primary-bright); }
+
+  /* ─── SECTION WRAPPER ─── */
+  .section { max-width: 1260px; margin: 0 auto; padding: 80px 24px; }
+  .section-alt { background: rgba(157,78,221,0.025); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .section-head { display: flex; align-items: flex-end; gap: 16px; margin-bottom: 44px; }
+  .big-num { font-family: 'Bebas Neue', sans-serif; font-size: 90px; color: rgba(157,78,221,.08); line-height: 1; flex-shrink: 0; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--primary-bright); margin-bottom: 5px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 6vw, 66px); line-height: 1; }
+  .section-count { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 3px; color: var(--dim); margin-top: 4px; }
+
+  .note {
+    background: rgba(157,78,221,.07); border-left: 3px solid var(--primary);
+    padding: 13px 18px; border-radius: 0 6px 6px 0; font-size: 13px; color: #9980c8;
+    margin-bottom: 32px; line-height: 1.65;
+  }
+
+  /* ─── CONCERT TIMELINE ─── */
+  .month-group { margin-bottom: 30px; }
+  .month-label {
+    font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: var(--primary-bright);
+    border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 10px; letter-spacing: 2px;
+  }
+  .concert-row {
+    display: grid; grid-template-columns: 76px 1fr auto auto;
+    gap: 0 16px; align-items: center;
+    background: var(--card); border: 1px solid transparent;
+    border-radius: 6px; padding: 14px 18px; margin-bottom: 3px;
+    transition: all .18s;
+  }
+  .concert-row:hover { border-color: var(--border); background: var(--card2); transform: translateX(4px); }
+  .concert-row.headliner { border-left: 3px solid var(--primary); }
+  .c-date { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--primary-bright); letter-spacing: 1px; }
+  .c-day { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; color: var(--dim); letter-spacing: 1px; text-transform: uppercase; }
+  .c-artist { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 700; color: var(--cream); line-height: 1.2; }
+  .c-sub { font-size: 12px; color: var(--dim); margin-top: 2px; line-height: 1.4; }
+  .c-venue { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--dim); letter-spacing: 1px; text-align: right; white-space: nowrap; }
+  .c-price { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--cream); text-align: right; white-space: nowrap; }
+  .c-link {
+    display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; border: 1px solid var(--border); padding: 5px 12px; border-radius: 4px;
+    color: var(--primary-bright); text-decoration: none; transition: all .2s; white-space: nowrap;
+  }
+  .c-link:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+  /* genre tags */
+  .g { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; font-weight: 700; margin-left: 5px; vertical-align: middle; }
+  .g-rock { background: rgba(255,128,128,.15); color: var(--red); }
+  .g-country { background: rgba(255,160,64,.15); color: var(--orange); }
+  .g-pop { background: rgba(122,180,255,.15); color: var(--blue); }
+  .g-rap { background: rgba(192,132,252,.15); color: var(--purple); }
+  .g-edm { background: rgba(111,212,139,.15); color: var(--green); }
+  .g-indie { background: rgba(232,185,79,.15); color: var(--gold); }
+  .g-comedy { background: rgba(95,212,192,.15); color: var(--teal); }
+  .g-rb { background: rgba(244,114,182,.15); color: var(--pink); }
+  .g-stadium { background: rgba(255,80,80,.18); color: #ffaaaa; border: 1px solid rgba(255,80,80,.3); }
+  .g-metal { background: rgba(140,140,140,.15); color: #bbb; }
+  .g-folk { background: rgba(232,185,79,.13); color: var(--gold); }
+  .g-electronic { background: rgba(95,212,192,.15); color: var(--teal); }
+
+  /* ─── FESTIVAL CARDS ─── */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(440px, 1fr)); gap: 18px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 26px; position: relative; overflow: hidden; transition: all .2s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: rgba(157,78,221,.5); }
+  .card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .card.accent-primary::before { background: linear-gradient(90deg, var(--primary), transparent); }
+  .card.accent-bright::before  { background: linear-gradient(90deg, var(--primary-bright), transparent); }
+  .card.accent-magenta::before { background: linear-gradient(90deg, var(--magenta), transparent); }
+  .card.accent-green::before   { background: linear-gradient(90deg, var(--green), transparent); }
+  .card.accent-purple::before  { background: linear-gradient(90deg, var(--purple), transparent); }
+  .card.accent-blue::before    { background: linear-gradient(90deg, var(--blue), transparent); }
+  .card.accent-pink::before    { background: linear-gradient(90deg, var(--pink), transparent); }
+  .card.accent-teal::before    { background: linear-gradient(90deg, var(--teal), transparent); }
+  .card.accent-orange::before  { background: linear-gradient(90deg, var(--orange), transparent); }
+  .card.accent-red::before     { background: linear-gradient(90deg, var(--red), transparent); }
+  .card.accent-gold::before    { background: linear-gradient(90deg, var(--gold), transparent); }
+
+  .card-date { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--primary-bright); margin-bottom: 10px; }
+  .card-title { font-family: 'Bebas Neue', sans-serif; font-size: 25px; line-height: 1.05; margin-bottom: 10px; }
+  .card-desc { font-size: 13px; color: #9980c8; line-height: 1.65; margin-bottom: 16px; }
+  .card-footer { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+  /* ─── BADGE TAGS ─── */
+  .badge {
+    display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 4px; font-weight: 700;
+  }
+  .b-primary{ background: rgba(157,78,221,.12); color: var(--primary-bright); }
+  .b-green  { background: rgba(111,212,139,.12); color: var(--green); }
+  .b-blue   { background: rgba(122,180,255,.12); color: var(--blue); }
+  .b-red    { background: rgba(255,128,128,.12); color: var(--red); }
+  .b-purple { background: rgba(192,132,252,.12); color: var(--purple); }
+  .b-orange { background: rgba(255,160,64,.12);  color: var(--orange); }
+  .b-pink   { background: rgba(244,114,182,.12); color: var(--pink); }
+  .b-teal   { background: rgba(95,212,192,.12);  color: var(--teal); }
+  .b-gold   { background: rgba(232,185,79,.12);  color: var(--gold); }
+  .b-magenta{ background: rgba(232,121,249,.12); color: var(--magenta); }
+
+  .free-tag  { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--green); }
+  .price-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--cream); }
+
+  .btn {
+    display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; border: 1px solid var(--border); padding: 6px 14px; border-radius: 4px;
+    color: var(--primary-bright); text-decoration: none; transition: all .2s;
+  }
+  .btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+  /* ─── ACTIVITIES TABLE ─── */
+  .act-table { width: 100%; border-collapse: collapse; }
+  .act-table thead th {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--primary-bright); padding: 12px 14px; text-align: left;
+    font-weight: 500; background: rgba(157,78,221,.07); border-bottom: 1px solid var(--primary);
+  }
+  .act-table tbody tr { border-bottom: 1px solid var(--border); transition: background .18s; }
+  .act-table tbody tr:hover { background: rgba(157,78,221,.04); }
+  .act-table td { padding: 16px 14px; vertical-align: top; font-size: 13.5px; color: #9980c8; line-height: 1.55; }
+  .v-name { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; color: var(--cream); display: block; margin-bottom: 5px; }
+  .v-rating { display: inline-flex; align-items: center; gap: 4px; background: rgba(157,78,221,.10); border: 1px solid var(--border); border-radius: 20px; padding: 2px 8px; font-size: 11px; color: var(--primary-bright); font-weight: 600; }
+
+  /* ─── EXPO CARDS ─── */
+  .expo-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 28px; display: grid; grid-template-columns: 90px 1fr; gap: 20px; align-items: start;
+    transition: all .2s; position: relative; overflow: hidden;
+  }
+  .expo-card:hover { border-color: rgba(157,78,221,.5); transform: translateY(-3px); }
+  .expo-card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--primary), transparent); }
+  .expo-date-block {
+    background: rgba(157,78,221,.08); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 8px; text-align: center;
+  }
+  .expo-month { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--primary-bright); }
+  .expo-days { font-family: 'Bebas Neue', sans-serif; font-size: 34px; line-height: 1; color: var(--cream); }
+  .expo-title { font-family: 'Bebas Neue', sans-serif; font-size: 24px; line-height: 1.1; margin-bottom: 8px; }
+  .expo-desc { font-size: 13px; color: #9980c8; line-height: 1.65; margin-bottom: 14px; }
+  .expo-footer { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+  /* ─── MUSIC FESTIVAL CARDS ─── */
+  .fest-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 24px 26px; position: relative; overflow: hidden; transition: all .2s;
+    display: grid; grid-template-columns: 80px 1fr; gap: 18px; align-items: start;
+  }
+  .fest-card:hover { transform: translateY(-3px); border-color: rgba(157,78,221,.5); }
+  .fest-card::before { content:''; position: absolute; top:0; left:0; bottom:0; width:3px; }
+  .fest-card.fc-rock::before     { background: var(--red); }
+  .fest-card.fc-country::before  { background: var(--orange); }
+  .fest-card.fc-folk::before     { background: var(--green); }
+  .fest-card.fc-jazz::before     { background: var(--blue); }
+  .fest-card.fc-metal::before    { background: #aaa; }
+  .fest-card.fc-electronic::before { background: var(--teal); }
+  .fest-card.fc-indie::before    { background: var(--gold); }
+  .fest-card.fc-roots::before    { background: var(--gold); }
+
+  .fc-date-block { text-align: center; }
+  .fc-month { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--dim); }
+  .fc-days { font-family: 'Bebas Neue', sans-serif; font-size: 30px; line-height: 1; color: var(--cream); }
+  .fc-location { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; color: var(--dim); margin-top: 3px; }
+  .fc-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; line-height: 1.05; margin-bottom: 6px; }
+  .fc-headliner { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--cream); margin-bottom: 7px; letter-spacing: .5px; }
+  .fc-desc { font-size: 12.5px; color: #9980c8; line-height: 1.6; margin-bottom: 12px; }
+  .fc-footer { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+  /* drive badge */
+  .drive-badge {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--dim); background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07); border-radius: 4px; padding: 2px 8px;
+  }
+
+  /* ─── DIVIDER ─── */
+  hr.div { border: none; border-top: 1px solid var(--border); }
+
+  /* ─── FOOTER ─── */
+  footer { text-align: center; padding: 60px 20px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13px; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes bob { 0%,100% { transform:translateX(-50%) translateY(0); } 50% { transform:translateX(-50%) translateY(9px); } }
+
+  /* ─── RESPONSIVE ─── */
+  @media(max-width:760px) {
+    .big-num { display:none; }
+    .concert-row { grid-template-columns: 58px 1fr; }
+    .concert-row .c-venue, .concert-row .c-price, .concert-row .c-link { display:none; }
+    .expo-card { grid-template-columns: 1fr; }
+    .fest-card { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .act-table th:nth-child(4), .act-table td:nth-child(4) { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">🇨🇦 Canada's Festival City — Updated & Expanded</p>
+    <h1>EDMONTON<span>SUMMER 2026</span></h1>
+    <p class="hero-sub">The complete group guide — activities · festivals · music festivals · concerts · expos · sports</p>
+    <div class="hero-tags">
+      <span class="hero-tag">🎮 9 Activities</span>
+      <span class="hero-tag">🎪 14 Festivals</span>
+      <span class="hero-tag">🎵 10+ Music Fests</span>
+      <span class="hero-tag">🎸 18+ Concerts</span>
+      <span class="hero-tag">🕹 3 Expos</span>
+      <span class="hero-tag">🏆 4 Sports Events</span>
+    </div>
+  </div>
+  <div class="scroll-arrow">↓</div>
+</section>
+
+<!-- ═══ STICKY NAV ═══ -->
+<nav class="sticky-nav">
+  <a class="nav-tab" href="#activities">🎮 Activities</a>
+  <a class="nav-tab" href="#festivals">🎪 Festivals</a>
+  <a class="nav-tab" href="#musicfests">🎵 Music Fests</a>
+  <a class="nav-tab" href="#concerts">🎸 Concerts</a>
+  <a class="nav-tab" href="#expos">🕹 Expos</a>
+  <a class="nav-tab" href="#sports">🏆 Sports</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════
+     01 — ACTIVITIES
+════════════════════════════════════ -->
+<div id="activities">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">01</div>
+    <div>
+      <p class="section-label">Things To Do Year-Round</p>
+      <h2 class="section-title">Group Activities</h2>
+      <p class="section-count">9 venues · open all summer</p>
+    </div>
+  </div>
+  <p class="note">💡 All venues are open year-round. Prices approximate CAD. Book weekends ahead — most fill fast with groups of 6+. Groupon often has deals for axe throwing and escape rooms.</p>
+  <div style="overflow-x:auto;">
+  <table class="act-table">
+    <thead>
+      <tr><th>Venue</th><th>What It Is</th><th>Approx. Price</th><th>Hours</th><th>Link</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="v-name">Escape Hour</span><span class="v-rating">⭐ 4.9 · 1,700+ reviews</span><br><br><span class="badge b-primary">Escape Rooms</span></td>
+        <td>Edmonton's #1 rated escape room with 7 rooms — battle rooms (teams vs teams), obstacle course, Matrix, Bank Heist, and more. Private room + dedicated game master for every group. The undisputed top pick for adult groups.</td>
+        <td><span class="price-tag">~$35–45/person</span></td>
+        <td style="font-size:12px;color:#6B6480;">Tue–Thu 12–11:30PM<br>Fri–Sun 10AM–11:45PM</td>
+        <td><a class="btn" href="https://escapehour.ca/edmonton/" target="_blank">Book</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">Axe Monkeys</span><span class="v-rating">⭐ 4.8 · 748 reviews</span><br><br><span class="badge b-red">Axe Throwing</span> <span class="badge b-red">Rage Room</span></td>
+        <td>Axes, knives, shurikens, maces, and a rage room where you smash things with a bat. $10 upgrade for exotic weapons. Insane group energy. Groupon deals available. Mobile setup for parties too.</td>
+        <td><span class="price-tag">~$42+/person (1hr)</span><br>Rage Room from ~$26</td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 2–10PM<br>Fri 2PM–12AM<br>Sat 10AM–12AM<br>Sun 12–8PM</td>
+        <td><a class="btn" href="http://www.axemonkeys.com/edmonton" target="_blank">Book</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">SPEEDERS Edmonton</span><span class="v-rating">⭐ 4.2 · 1,947 reviews</span><br><br><span class="badge b-blue">Go-Karts</span> <span class="badge b-primary">Arcade</span> <span class="badge b-primary">Bowling</span></td>
+        <td>Multi-level electric go-karts hitting 70km/h. Plus AR axe throwing, duckpin bowling, full arcade, bar, and restaurant. Best single-destination group day in the city. Book a private race package for groups 8+.</td>
+        <td><span class="price-tag">Weekday $35/race</span><br><span class="price-tag">Weekend $40/race</span><br>4-pack: $90–$110</td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 11AM–10PM<br>Fri–Sat 11AM–12AM<br>Sun 10AM–10PM</td>
+        <td><a class="btn" href="https://speeders.ca/edmonton/book-now/" target="_blank">Book</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">The Rec Room (South)</span><span class="v-rating">⭐ 4.1 · 5,053 reviews</span><br><br><span class="badge b-blue">VR & Arcade</span> <span class="badge b-primary">Bowling</span> <span class="badge b-red">Axe Throwing</span></td>
+        <td>Massive entertainment complex at South Edmonton Common. VR, arcade, axe throwing, bowling, and a full bar all in one place. Great for groups who want variety without venue-hopping. Gets busy on weekends — go early.</td>
+        <td><span class="price-tag">Play cards from ~$25</span></td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 11:30AM–11PM<br>Fri–Sat 11AM–1AM<br>Sun 11AM–11PM</td>
+        <td><a class="btn" href="https://www.therecroom.com/?location=edmonton-south" target="_blank">Info</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">The Banquet (ICE District)</span><span class="v-rating">⭐ 4.3 · 834 reviews</span><br><br><span class="badge b-purple">Sports Bar</span> <span class="badge b-primary">Bowling</span></td>
+        <td>Bowling + killer bar food right downtown in the ICE District. Perfect pairing with a summer Elks game at Commonwealth or any Rogers Place concert. Strong drinks, great vibes, zero need to travel.</td>
+        <td><span class="price-tag">Bowling ~$8–10/game</span></td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 11:30AM–1AM<br>Fri–Sat 11:30AM–2AM<br>Sun 11:30AM–1AM</td>
+        <td><a class="btn" href="https://thebanquetbar.com/" target="_blank">Info</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">Analog Brewing Co.</span><span class="v-rating">⭐ 4.8 · 448 reviews</span><br><br><span class="badge b-green">Craft Brewery</span> <span class="badge b-blue">Live Jackbox TV</span></td>
+        <td>Wild rotating taps (spicy Mexican stout, anyone?), vintage arcade games, and Jackbox TV nights where your whole group plays party games on your phones with the entire bar. Feels like a house party. Edmonton's best kept secret.</td>
+        <td><span class="free-tag">Free entry</span><br>Beers ~$7–10</td>
+        <td style="font-size:12px;color:#6B6480;"><span style="color:#ff8080;">Closed Mon–Wed</span><br>Thu 4–10PM · Fri 3–10PM<br>Sat 12–11PM · Sun 2–6PM</td>
+        <td><a class="btn" href="http://www.analogbrewing.ca/" target="_blank">Info</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">Irrational Brewing Co.</span><span class="v-rating">⭐ 4.7 · 194 reviews</span><br><br><span class="badge b-green">Craft Brewery</span></td>
+        <td>One of Edmonton's absolute best craft breweries on 124 St. Massive rotating tap list — sours, hazy IPAs, pastry stouts. Cozy atmosphere, killer pretzels and pies, BYOF friendly. Staff that genuinely know their beer.</td>
+        <td><span class="free-tag">Free entry</span><br>Beers ~$7–10</td>
+        <td style="font-size:12px;color:#6B6480;"><span style="color:#ff8080;">Closed Mon–Tue</span><br>Wed–Thu 3–10PM<br>Fri 3PM–12AM<br>Sat 12PM–12AM · Sun 12–8PM</td>
+        <td><a class="btn" href="https://www.irrationalbrewing.ca/" target="_blank">Info</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">Time Escape</span><span class="v-rating">⭐ 4.8 · 1,381 reviews</span><br><br><span class="badge b-primary">Escape Rooms</span></td>
+        <td>Second escape room option if Escape Hour is sold out. Multiple themed rooms, great hosts, 20+ rooms across two Edmonton locations. They'll often give your group extra time if the next slot is open.</td>
+        <td><span class="price-tag">~$30–40/person</span></td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 4–10PM<br>Fri–Sat 12–11:30PM<br>Sun 12–10PM</td>
+        <td><a class="btn" href="https://timeescape.com/" target="_blank">Book</a></td>
+      </tr>
+      <tr>
+        <td><span class="v-name">Monster Mini Golf</span><span class="v-rating">⭐ 4.4 · 1,115 reviews</span><br><br><span class="badge b-blue">Mini Golf</span></td>
+        <td>Blacklight glow-in-the-dark 18-hole mini golf with monster themes and neon murals. Way more fun for adults than it sounds — especially once drinks are involved. Competitive layouts for people who take their mini golf seriously.</td>
+        <td><span class="price-tag">~$14–18/person</span></td>
+        <td style="font-size:12px;color:#6B6480;">Mon–Thu 12–9PM<br>Fri–Sat 12–10PM<br>Sun 12–8PM</td>
+        <td><a class="btn" href="https://monsterminigolf.com/locations/ca/al/edmonton/" target="_blank">Info</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+
+<hr class="div">
+
+<!-- ═══════════════════════════════════
+     02 — FESTIVALS
+════════════════════════════════════ -->
+<div id="festivals" class="section-alt">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">02</div>
+    <div>
+      <p class="section-label">Canada's Festival City</p>
+      <h2 class="section-title">Summer Festivals 2026</h2>
+      <p class="section-count">14 festivals — June through August</p>
+    </div>
+  </div>
+  <p class="note">🏙️ Edmonton hosts 50+ festivals annually — more per capita than almost any city in Canada. The ones below are the cream of the crop for summer 2026. Many are fully free. This city goes absolutely <em>hard</em> in summer.</p>
+  <div class="grid">
+
+    <div class="card accent-primary">
+      <p class="card-date">June — All Month</p>
+      <h3 class="card-title">Edmonton Pride Month</h3>
+      <p class="card-desc">Over 50 events throughout June produced by up to 30 organizations and allies. Club nights, art shows, outdoor socials, drag performances, film screenings, and community mixers across the entire city. Culminates in the Pride Festival late in the month.</p>
+      <div class="card-footer"><span class="free-tag">Mostly FREE</span><span class="badge b-pink">Citywide</span><a class="btn" href="https://prideedmonton.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-blue">
+      <p class="card-date">June 19 – 28</p>
+      <h3 class="card-title">Edmonton International Jazz Festival</h3>
+      <p class="card-desc">World-class jazz at venues all over the city — Yardbird Suite, Starlite Room, La Cité Francophone, and outdoor stages. Mellow and lively in equal measure. Most outdoor shows are completely free. Perfect summer evening energy for a bar crawl through Old Strathcona.</p>
+      <div class="card-footer"><span class="free-tag">Mostly FREE</span><span class="badge b-blue">Citywide</span><a class="btn" href="https://edmontonjazz.com/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-teal">
+      <p class="card-date">June 21 – July 1</p>
+      <h3 class="card-title">The Works Art & Design Festival</h3>
+      <p class="card-desc">North America's largest free outdoor art and design festival — celebrating its 40th anniversary in 2026! Hundreds of performances, massive sculptural installations, murals, and live music spread across downtown Edmonton for 11 straight days.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-teal">Downtown</span><a class="btn" href="https://www.theworks.ab.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-orange">
+      <p class="card-date">July 10 – 12</p>
+      <h3 class="card-title">Whyte Avenue Art Walk</h3>
+      <p class="card-desc">Historic Whyte Ave transforms into an open-air gallery as local artists exhibit right on the street. Completely free, completely social. One of the most beloved neighbourhood events in the city. Pair it with bar hopping along the strip for an unbeatable Saturday afternoon.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-orange">Old Strathcona</span></div>
+    </div>
+
+    <div class="card accent-primary">
+      <p class="card-date">July 17 – 19</p>
+      <h3 class="card-title">Great Outdoors Comedy Festival</h3>
+      <p class="card-desc">Top-tier stand-up comedy under the stars across three nights. Nationally recognized headliners in a relaxed outdoor setting. The perfect group event for people who don't all agree on music but everyone loves laughing. Bring lawn chairs and a cooler.</p>
+      <div class="card-footer"><span class="price-tag">Tickets TBA</span><span class="badge b-teal">Outdoor</span></div>
+    </div>
+
+    <div class="card accent-bright">
+      <p class="card-date">July 17 – 27</p>
+      <h3 class="card-title">Taste of Edmonton 🍔</h3>
+      <p class="card-desc">Edmonton's premier outdoor food festival takes over Sir Winston Churchill Square for 11 days. 50+ local restaurants serve up signature bites at festival prices, paired with live entertainment on multiple stages every single day. The best way to eat your way through the city's best restaurants.</p>
+      <div class="card-footer"><span class="free-tag">FREE entry</span><span class="badge b-primary">Churchill Square</span><a class="btn" href="https://www.tasteofedmonton.com/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-magenta">
+      <p class="card-date">July 18 – 27</p>
+      <h3 class="card-title">K-Days</h3>
+      <p class="card-desc">Edmonton's iconic 10-day summer fair. Rides, midway games, fireworks, nightly concerts, SuperDogs, gaming exhibitions, vintage market, Indigenous Experience — the list is genuinely endless. A summer tradition since 1879. Overlaps with Taste of Edmonton for a stacked week of back-to-back events.</p>
+      <div class="card-footer"><span class="price-tag">GA from ~$30–78/day</span><a class="btn" href="https://www.k-days.com/" target="_blank">Tickets</a></div>
+    </div>
+
+    <div class="card accent-orange">
+      <p class="card-date">August 1 – 2</p>
+      <h3 class="card-title">Edmonton Heritage Festival</h3>
+      <p class="card-desc">Canada's largest multicultural festival at Hawrelak Park. 90,000+ attendees, 60+ countries, multiple stages, and arguably the best international food you'll ever eat in Edmonton — all in one weekend. Free entry, just pay for the food (which is the entire point).</p>
+      <div class="card-footer"><span class="free-tag">FREE ADMISSION</span><span class="badge b-orange">Hawrelak Park</span><a class="btn" href="https://www.heritagefest.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-pink">
+      <p class="card-date">August 7 – 9</p>
+      <h3 class="card-title">Cariwest Caribbean Arts Festival 🌴</h3>
+      <p class="card-desc">60,000+ people descend on Churchill Square for three days of Caribbean culture. Friday Night Costume Extravaganza, the iconic Saturday Parade with spectacular costumes and soca music, a full Caribbean Village with live stages, food vendors, and a marketplace. Runs the same weekend as Folk Fest and Animethon.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-pink">Churchill Square</span><a class="btn" href="https://www.cariwest.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-primary">
+      <p class="card-date">August — Dates TBA</p>
+      <h3 class="card-title">Edmonton Pride Festival</h3>
+      <p class="card-desc">Edmonton's biggest 2SLGBTQ+ celebration takes over Churchill Square for a multi-day free festival. Live headliner performances, drag shows, community stages, vendor markets, and a sea of colour. Free and all-ages.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-pink">Churchill Square</span><a class="btn" href="https://prideedmonton.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-teal">
+      <p class="card-date">Mid-August, Dates TBA</p>
+      <h3 class="card-title">Afro Music Fest</h3>
+      <p class="card-desc">Edmonton's fastest-growing celebration of Afro-Caribbean culture, right at ICE District's Fan Park. Two days of international stars and local artists, cultural showcases, delicious food vendors, dance workshops, and a youth stage. Free and downtown — one of summer's most electric atmospheres.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-teal">Fan Park, ICE District</span><a class="btn" href="https://afromusicfestyeg.com/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-purple">
+      <p class="card-date">Mid-August</p>
+      <h3 class="card-title">Edmonton Fringe Theatre Festival</h3>
+      <p class="card-desc">North America's biggest and oldest Fringe in Old Strathcona. Ten days of every kind of performance — comedy, drama, circus, and the genuinely bizarre. Plus sprawling beer gardens and buskers literally everywhere on Whyte Ave. Shows from $10–20, beer garden is always free to enter.</p>
+      <div class="card-footer"><span class="price-tag">Shows from ~$10–20</span><a class="btn" href="https://fringetheatre.ca/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-blue">
+      <p class="card-date">Late August (Labour Day Weekend)</p>
+      <h3 class="card-title">Symphony Under the Sky 🎻</h3>
+      <p class="card-desc">The Edmonton Symphony Orchestra performs outdoors at Snow Valley under the stars. A beloved annual tradition — bring a blanket, a picnic, and wine. One of the most civilized evenings Edmonton offers all summer. Kids 17 & under free on the grass.</p>
+      <div class="card-footer"><span class="price-tag">Tickets TBA</span><span class="badge b-blue">Snow Valley</span><a class="btn" href="https://www.winspearcentre.com/" target="_blank">Info</a></div>
+    </div>
+
+    <div class="card accent-green">
+      <p class="card-date">Edmonton Mural Festival</p>
+      <h3 class="card-title">Edmonton Mural Festival</h3>
+      <p class="card-desc">Watch massive murals come to life in real time across the city over summer. Artists from around the world transform building walls into stunning public art. Walking tour routes available. Ongoing throughout summer — follow for new reveals all season.</p>
+      <div class="card-footer"><span class="free-tag">FREE</span><span class="badge b-green">Citywide</span><a class="btn" href="https://edmontonmuralfestival.com/" target="_blank">Info</a></div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<hr class="div">
+
+<!-- ═══════════════════════════════════
+     03 — MUSIC FESTIVALS
+════════════════════════════════════ -->
+<div id="musicfests">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">03</div>
+    <div>
+      <p class="section-label">Dedicated Multi-Act Events</p>
+      <h2 class="section-title">Music Festivals 2026</h2>
+      <p class="section-count">10+ music festivals · June through September · Edmonton & surrounding area</p>
+    </div>
+  </div>
+  <p class="note">🎵 Edmonton and area are stacked with dedicated music festivals this summer — rock, country, folk, metal, electronic, indie, blues, and roots. Several require a short drive but are absolutely worth it. Distances from Edmonton indicated on each card.</p>
+
+  <!-- IN THE CITY -->
+  <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--primary-bright);margin-bottom:16px;">IN & NEAR EDMONTON</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:16px;margin-bottom:44px;">
+
+    <div class="fest-card fc-rock">
+      <div class="fc-date-block">
+        <div class="fc-month">Jul</div>
+        <div class="fc-days">11–12</div>
+        <div class="fc-location">EXPO Centre</div>
+      </div>
+      <div>
+        <div class="fc-title">Rockin' Thunder Festival</div>
+        <div class="fc-headliner">🎤 Creed (Sun) · Three Days Grace (Sat) + more TBA</div>
+        <div class="fc-desc">Edmonton's premier outdoor rock festival on the EXPO Centre grounds. Two nights of hard rock, a local stage spotlighting emerging Canadian talent, massive production. Now in its second year after a debut featuring Def Leppard and Weezer. Insane crowd energy — the most electric atmosphere of the entire summer.</div>
+        <div class="fc-footer">
+          <span class="price-tag">2-day GA ~$240 · Single day ~$130–150</span>
+          <span class="badge b-red">Rock</span>
+          <a class="btn" href="https://www.rockinthunderfest.com/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-country">
+      <div class="fc-date-block">
+        <div class="fc-month">Aug</div>
+        <div class="fc-days">28–29</div>
+        <div class="fc-location">Fan Park</div>
+      </div>
+      <div>
+        <div class="fc-title">Boots and Hearts West ★ NEW</div>
+        <div class="fc-headliner">🎤 Shaboozey (Sat) · Russell Dickerson (Fri) + Midland, Max McNown & more</div>
+        <div class="fc-desc">Brand-new country festival expanding the famous Ontario brand to Edmonton for the very first time. Produced by Republic Live (8-time CCMA Country Festival of the Year). Gates 2:30PM, ends 11PM. Indoor/outdoor stages. Kids 12 & under free in GA.</div>
+        <div class="fc-footer">
+          <span class="price-tag">GA & VIP passes via Ticketmaster</span>
+          <span class="badge b-orange">Country</span>
+          <a class="btn" href="https://bootsandhearts.com/west/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-folk">
+      <div class="fc-date-block">
+        <div class="fc-month">Aug</div>
+        <div class="fc-days">6–9</div>
+        <div class="fc-location">Gallagher Park</div>
+      </div>
+      <div>
+        <div class="fc-title">Edmonton Folk Music Festival</div>
+        <div class="fc-headliner">🎤 Full lineup announced May 2026 · Tickets on sale June 6</div>
+        <div class="fc-desc">Four days in the natural amphitheatre of Gallagher Hill — one of the best festival atmospheres in Canada. World-class eclectic performers, incredible food, and the famous hillside tarp culture. Now in its 46th year. Sells out every year without exception — buy early.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Weekend ~$234 · Single day ~$109–115</span>
+          <span class="badge b-green">Folk / Roots / World</span>
+          <a class="btn" href="https://edmontonfolkfest.org/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-roots">
+      <div class="fc-date-block">
+        <div class="fc-month">Jun</div>
+        <div class="fc-days">19–20</div>
+        <div class="fc-location">Beaumont · 15 min</div>
+      </div>
+      <div>
+        <div class="fc-title">Beaumont Music Festival</div>
+        <div class="fc-headliner">🎤 2026 lineup TBA · 100% Canadian-content lineup</div>
+        <div class="fc-desc">Canada's only festival with 100% Canadian-content — every single act on the bill is Canadian. Past headliners include The Headstones, The Beaches, Dear Rouge, and 54-40. Held at a new venue in 2026 (Ken Nichol Regional Recreation Centre). Students, seniors discount pricing.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Weekend ~$159 · Fri ~$69 · Sat ~$109</span>
+          <span class="badge b-gold">Blues / Roots / Folk</span>
+          <span class="drive-badge">15 min drive</span>
+          <a class="btn" href="https://beaumontmusicfestival.ca/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-indie">
+      <div class="fc-date-block">
+        <div class="fc-month">Jul</div>
+        <div class="fc-days">10–11</div>
+        <div class="fc-location">Sherwood Park · 20 min</div>
+      </div>
+      <div>
+        <div class="fc-title">RavenWood Music Festival</div>
+        <div class="fc-headliner">🎤 All-Canadian lineup · 2026 acts TBA (announced Dec 2025)</div>
+        <div class="fc-desc">Non-profit festival in your backyard at Broadmoor Lake Park, Sherwood Park. All-Canadian acts, kids zone, artisan market, local food trucks, licensed bar. Billed as "the region's most affordable festival" — and they mean it. One of those rare events where the vibe outstrips the price tag.</div>
+        <div class="fc-footer">
+          <span class="price-tag">~$65 all-in</span>
+          <span class="badge b-gold">Canadian Indie / Rock / Folk</span>
+          <span class="drive-badge">20 min drive</span>
+          <a class="btn" href="https://www.ravenwoodexperience.com/" target="_blank">Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-metal">
+      <div class="fc-date-block">
+        <div class="fc-month">Jun</div>
+        <div class="fc-days">26–27</div>
+        <div class="fc-location">Millet · 45 min</div>
+      </div>
+      <div>
+        <div class="fc-title">Decimate Metalfest</div>
+        <div class="fc-headliner">🎤 22–23 metal bands from AB, BC, MB + 4 US acts · Full lineup TBA</div>
+        <div class="fc-desc">Alberta's dedicated heavy metal festival in Millet, 45 minutes south of Edmonton. 2-day event at the Millet Agriplex. Air guitar contests, drag performers, youth band showcase, and a pancake breakfast the morning after. Camping available at Millet Lions Memorial Campground.</div>
+        <div class="fc-footer">
+          <span class="price-tag">2-day ~$135 · Fri ~$60 · Sat ~$90</span>
+          <span class="badge b-red">Heavy Metal</span>
+          <span class="drive-badge">45 min drive</span>
+          <a class="btn" href="https://www.decimatemetalfest.com/" target="_blank">Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-indie">
+      <div class="fc-date-block">
+        <div class="fc-month">Sep</div>
+        <div class="fc-days">11–13</div>
+        <div class="fc-location">Downtown YEG</div>
+      </div>
+      <div>
+        <div class="fc-title">Purple City Music Festival</div>
+        <div class="fc-headliner">🎤 60+ acts across multiple downtown venues · 2026 lineup TBA</div>
+        <div class="fc-desc">Volunteer-run boutique festival using the Starlite Room, Freemasons Hall, McDougall United Church, and other spaces within a two-block downtown radius. Indie, psyche rock, punk, electronic, avant-garde — all-ages, all in walking distance. Past headliners: !!! (Chk Chk Chk), A Place to Bury Strangers.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Weekend wristband ~$165 · Day passes available</span>
+          <span class="badge b-purple">Indie / Experimental / Punk</span>
+          <a class="btn" href="https://www.purplecityfest.com/" target="_blank">Info</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OUT OF TOWN -->
+  <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--primary-bright);margin-bottom:16px;">WORTH THE DRIVE</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:16px;">
+
+    <div class="fest-card fc-country">
+      <div class="fc-date-block">
+        <div class="fc-month">Jul 30</div>
+        <div class="fc-days">– Aug 2</div>
+        <div class="fc-location">Camrose · 1 hr</div>
+      </div>
+      <div>
+        <div class="fc-title">Big Valley Jamboree</div>
+        <div class="fc-headliner">🎤 Keith Urban · Old Dominion · Riley Green · Nate Smith + 15 more acts</div>
+        <div class="fc-desc">Canada's largest country festival — 25,000 daily on a 400-acre camping village in Camrose. 4-time CCMA Event of the Year. Also features The Dead South, Chase Rice, Gavin Adcock, Robyn Ottolini, and more. Thursday Kickoff night ($50) is a sleeper hit. Kids 10 & under free in GA.</div>
+        <div class="fc-footer">
+          <span class="price-tag">3-day GA ~$275 · 1-day ~$145 · Camping separate</span>
+          <span class="badge b-orange">Country</span>
+          <span class="drive-badge">1 hr drive · Camrose AB</span>
+          <a class="btn" href="https://www.bigvalleyjamboree.com/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-electronic">
+      <div class="fc-date-block">
+        <div class="fc-month">Aug</div>
+        <div class="fc-days">20–23</div>
+        <div class="fc-location">Evansburg · 1 hr</div>
+      </div>
+      <div>
+        <div class="fc-title">The Womp Music Festival</div>
+        <div class="fc-headliner">🎤 150+ artists across 3 stages · 9th anniversary edition</div>
+        <div class="fc-desc">Alberta's only dedicated summer electronic music festival — house, drum & bass, funk, and bass music under Alberta's open skies on a camping farm near Evansburg. PK Sound systems, forest vibes, and a community that comes back year after year. No single-day tickets — full camping weekend only. All ages.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Full festival camping pass ~$80–250</span>
+          <span class="badge b-teal">House / D&amp;B / Electronic</span>
+          <span class="drive-badge">1 hr drive · Evansburg AB</span>
+          <a class="btn" href="https://www.ilovethewomp.com/" target="_blank">Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-folk">
+      <div class="fc-date-block">
+        <div class="fc-month">Jul 31</div>
+        <div class="fc-days">– Aug 2</div>
+        <div class="fc-location">Pigeon Lake · 1 hr</div>
+      </div>
+      <div>
+        <div class="fc-title">Pigeon Lake Music Festival</div>
+        <div class="fc-headliner">🎤 The Tea Party · Headstones · Chilliwack · Sass Jordan · Northern Pikes + more</div>
+        <div class="fc-desc">Three days of Canadian rock and pop legends on Pigeon Lake, 1 hour southwest. Amazing lineup of classic Canadian acts. Kids 12 & under free. Camping available at Hilah Ayers Wilderness RV Park right on the festival grounds.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Tickets from ~$60+</span>
+          <span class="badge b-green">Canadian Rock / Pop</span>
+          <span class="drive-badge">1 hr drive · Mulhurst Bay AB</span>
+          <a class="btn" href="https://www.plmf.ca/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fest-card fc-indie">
+      <div class="fc-date-block">
+        <div class="fc-month">Aug</div>
+        <div class="fc-days">27–30</div>
+        <div class="fc-location">Pigeon Lake · 1 hr</div>
+      </div>
+      <div>
+        <div class="fc-title">Pigeon Lake Concert Series</div>
+        <div class="fc-headliner">🎤 Walk Off The Earth · Magic! · Everclear · Valley · The Blue Stones + more</div>
+        <div class="fc-desc">A separate event from the July festival — billed as "summer camp for the whole family." Freestyle motocross, magic shows, a night market, and camping alongside the live music. Runs the same weekend as Boots and Hearts West in Edmonton — coordinate if you want to hit both regions.</div>
+        <div class="fc-footer">
+          <span class="price-tag">Weekend ~$141–171 · Fri ~$89 · Sat ~$119</span>
+          <span class="badge b-gold">Canadian Indie / Rock</span>
+          <span class="drive-badge">1 hr drive · Mulhurst Bay AB</span>
+          <a class="btn" href="https://www.pigeonlakeconcertseries.ca/" target="_blank">Tickets</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<hr class="div">
+
+<!-- ═══════════════════════════════════
+     04 — CONCERTS
+════════════════════════════════════ -->
+<div id="concerts" class="section-alt">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">04</div>
+    <div>
+      <p class="section-label">Live Music</p>
+      <h2 class="section-title">Summer Concerts 2026</h2>
+      <p class="section-count">18+ confirmed shows · June through August</p>
+    </div>
+  </div>
+  <p class="note">🎟️ Prices are approximate starting prices in CAD at time of writing — they fluctuate. <strong style="color:var(--cream)">Rogers Place</strong> = 10220 104 Ave NW (20,734 cap) · <strong style="color:var(--cream)">Commonwealth Stadium</strong> = 11000 Stadium Rd NW (56,000+ cap) · <strong style="color:var(--cream)">Northern AB Jubilee</strong> = 11455 87 Ave NW · <strong style="color:var(--cream)">Starlite Room / Temple Bar</strong> = 10030 102 St NW · <strong style="color:var(--cream)">Temple Ballroom</strong> = 11133 156 St NW</p>
+
+  <!-- JUNE -->
+  <div class="month-group">
+    <div class="month-label">JUNE</div>
+
+    <div class="concert-row">
+      <div><div class="c-date">JUN 3</div><div class="c-day">Wed</div></div>
+      <div>
+        <div class="c-artist">The Black Keys <span class="g g-rock">Rock</span></div>
+        <div class="c-sub">Blues-rock legends on their latest tour — raw, heavy, expertly crafted</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7:30PM</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">JUN 10</div><div class="c-day">Wed</div></div>
+      <div>
+        <div class="c-artist">The Guess Who <span class="g g-rock">Classic Rock</span></div>
+        <div class="c-sub">Burton Cummings & Randy Bachman "Takin' It Back" Canadian Tour + Don Felder (Eagles) · First time in 23 years</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7:30PM</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">JUN 13</div><div class="c-day">Sat</div></div>
+      <div>
+        <div class="c-artist">Bailey Zimmerman <span class="g g-country">Country</span></div>
+        <div class="c-sub">Country's fastest rising star — massive voice, big hooks, certified arena energy</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7PM</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">JUN 19</div><div class="c-day">Fri</div></div>
+      <div>
+        <div class="c-artist">Ne-Yo + Akon <span class="g g-rb">R&amp;B</span></div>
+        <div class="c-sub">"Nights Like This" Tour — two titans of 2000s R&amp;B on one stage. A banger-filled nostalgia party</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 8PM</div><div class="c-price">From ~$171 CAD</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+  </div>
+
+  <!-- JULY -->
+  <div class="month-group">
+    <div class="month-label">JULY</div>
+
+    <div class="concert-row headliner">
+      <div><div class="c-date">JUL 3</div><div class="c-day">Fri</div></div>
+      <div>
+        <div class="c-artist">A$AP Rocky <span class="g g-rap">Hip-Hop</span></div>
+        <div class="c-sub">"Don't Be Dumb" World Tour — first major tour in years, full-scale production and hype</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7:30PM</div><div class="c-price">From ~$87 CAD</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row headliner">
+      <div><div class="c-date">JUL 24</div><div class="c-day">Fri</div></div>
+      <div>
+        <div class="c-artist">Post Malone + Jelly Roll <span class="g g-stadium">STADIUM</span></div>
+        <div class="c-sub">The BIG ASS Stadium Tour Pt. 2 + Carter Faith · Night 1 of 2 — biggest pop event of the summer</div>
+      </div>
+      <div><div class="c-venue">Commonwealth Stadium · 7:30PM</div><div class="c-price">From ~$57 CAD</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca/post-malone-tickets/artist/2119390" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row headliner">
+      <div><div class="c-date">JUL 25</div><div class="c-day">Sat</div></div>
+      <div>
+        <div class="c-artist">Post Malone + Jelly Roll <span class="g g-stadium">STADIUM</span></div>
+        <div class="c-sub">Night 2 of 2 — two sold-out stadium shows back to back</div>
+      </div>
+      <div><div class="c-venue">Commonwealth Stadium · 7:30PM</div><div class="c-price">From ~$57 CAD</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca/post-malone-tickets/artist/2119390" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">JUL 26</div><div class="c-day">Sun</div></div>
+      <div>
+        <div class="c-artist">Nate Bargatze <span class="g g-comedy">Comedy</span></div>
+        <div class="c-sub">"Big Dumb Eyes" World Tour — legitimately the funniest man in stand-up right now. Will sell out</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7PM</div><div class="c-price">From ~$59 CAD</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+  </div>
+
+  <!-- AUGUST -->
+  <div class="month-group">
+    <div class="month-label">AUGUST</div>
+
+    <div class="concert-row headliner">
+      <div><div class="c-date">AUG 9</div><div class="c-day">Sun</div></div>
+      <div>
+        <div class="c-artist">AC/DC <span class="g g-rock">Rock</span> <span class="g g-stadium">STADIUM</span></div>
+        <div class="c-sub">One of the greatest rock bands of all time. A stadium full of thunderstruck people. Enough said.</div>
+      </div>
+      <div><div class="c-venue">Commonwealth Stadium · 7PM</div><div class="c-price">From ~$95 CAD</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">AUG 14</div><div class="c-day">Fri</div></div>
+      <div>
+        <div class="c-artist">Caamp <span class="g g-folk">Folk / Indie</span></div>
+        <div class="c-sub">Warm, intimate folk vibes in the gorgeous Jubilee Auditorium — perfect summer night for a different pace</div>
+      </div>
+      <div><div class="c-venue">Northern AB Jubilee</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">AUG 17</div><div class="c-day">Mon</div></div>
+      <div>
+        <div class="c-artist">Shinedown <span class="g g-rock">Rock</span></div>
+        <div class="c-sub">Hard-hitting rock with a massive back catalogue — arena-filling anthems all night long</div>
+      </div>
+      <div><div class="c-venue">Rogers Place · 7:30PM</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.rogersplace.com/events/" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row headliner">
+      <div><div class="c-date">AUG 26</div><div class="c-day">Wed</div></div>
+      <div>
+        <div class="c-artist">Guns N' Roses <span class="g g-rock">Rock</span> <span class="g g-stadium">STADIUM</span></div>
+        <div class="c-sub">World Tour 2026 — the can't-miss stadium rock spectacle of the summer. Welcome to the jungle.</div>
+      </div>
+      <div><div class="c-venue">Commonwealth Stadium · 6:25PM</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca" target="_blank">Tickets</a>
+    </div>
+
+    <div class="concert-row">
+      <div><div class="c-date">AUG 28</div><div class="c-day">Fri</div></div>
+      <div>
+        <div class="c-artist">Propagandhi <span class="g g-rock">Punk / Metal</span></div>
+        <div class="c-sub">Legendary Winnipeg punk-metal band — politically charged and musically unhinged, intimate venue for a big sound</div>
+      </div>
+      <div><div class="c-venue">Pawn Shop Live</div><div class="c-price">Prices TBA</div></div>
+      <a class="c-link" href="https://www.ticketmaster.ca" target="_blank">Tickets</a>
+    </div>
+
+  </div>
+
+  <!-- SMALLER VENUES -->
+  <div style="margin-top: 32px;">
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--primary-bright);margin-bottom:16px;">Also Watch: Edmonton's Best Small Venues All Summer</p>
+    <div class="grid-2">
+      <div class="card accent-teal">
+        <p class="card-date">Throughout Summer</p>
+        <h3 class="card-title">Midway Music Hall</h3>
+        <p class="card-desc">Edmonton's premier mid-size touring venue (~900 cap). Genres from metal to indie to electronic. Shows 2–3 nights a week all summer. Much more intimate than Rogers Place. Check their calendar weekly for surprise bookings.</p>
+        <div class="card-footer"><a class="btn" href="https://midway.live/" target="_blank">Full Calendar</a></div>
+      </div>
+      <div class="card accent-primary">
+        <p class="card-date">Throughout Summer</p>
+        <h3 class="card-title">Starlite Room + Temple Bar</h3>
+        <p class="card-desc">The heartbeat of Edmonton's underground scene since the Bronx / Rev / Lush days. Punk, metal, indie, hip-hop, experimental — the real stuff. The Temple Bar is the adjoining smaller space. Check weekly for late-night bookings that don't exist anywhere else in the city.</p>
+        <div class="card-footer"><a class="btn" href="https://www.starliteroom.ca/calendar/" target="_blank">Starlite Calendar</a></div>
+      </div>
+      <div class="card accent-purple">
+        <p class="card-date">Throughout Summer</p>
+        <h3 class="card-title">Temple Ballroom</h3>
+        <p class="card-desc">10,000 sq ft venue on the west end. Two-tier upper level with perfect sight lines to the stage. EDM, hip-hop, rock and metal touring acts — up to 8 shows per month. Bottle service VIP available. Free parking any day of the week. One of the best mid-size setups in the city.</p>
+        <div class="card-footer"><a class="btn" href="https://templeballroom.com/our-events/" target="_blank">Temple Calendar</a></div>
+      </div>
+      <div class="card accent-blue">
+        <p class="card-date">Throughout Summer</p>
+        <h3 class="card-title">Pawn Shop Live</h3>
+        <p class="card-desc">Gritty sister venue to the Starlite Room. Where the underground lives. Consistently books the acts that don't fit anywhere else. Check weekly — the really good surprises happen here.</p>
+        <div class="card-footer"><a class="btn" href="https://www.starliteroom.ca/calendar/" target="_blank">Calendar</a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<hr class="div">
+
+<!-- ═══════════════════════════════════
+     05 — EXPOS & CONVENTIONS
+════════════════════════════════════ -->
+<div id="expos">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">05</div>
+    <div>
+      <p class="section-label">Pop Culture, Gaming & Anime</p>
+      <h2 class="section-title">Expos & Conventions</h2>
+      <p class="section-count">3 major conventions · June, August & September</p>
+    </div>
+  </div>
+  <p class="note">🎮 Edmonton is a serious stop on the North American convention circuit. These three events cover gaming, anime, and full-spectrum pop culture — and all three draw massive crowds.</p>
+  <div class="grid">
+
+    <div class="expo-card">
+      <div class="expo-date-block">
+        <div class="expo-month">Jun</div>
+        <div class="expo-days">19–21</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:4px;">2026</div>
+      </div>
+      <div>
+        <div class="expo-title">Game Con Canada 2026</div>
+        <div class="expo-desc">Canada's largest gaming convention — 40,000+ attendees. Three days of playable video games, tabletop RPGs, TCG tournaments, Canada's largest cosplay cash prize competition, and a full <strong style="color:var(--cream)">Warhammer Open</strong> with Golden Tickets to the World Championships. Also running June 18–19: the <strong style="color:var(--cream)">North American Games Industry Summit (NAGIS)</strong> with Atari founder Nolan Bushnell as keynote.</div>
+        <div class="expo-footer">
+          <span class="price-tag">Day pass ~$47 · Weekend ~$113</span>
+          <span class="badge b-primary">All Ages</span>
+          <a class="btn" href="https://gameconcanada.com/" target="_blank">Get Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="expo-card">
+      <div class="expo-date-block">
+        <div class="expo-month">Aug</div>
+        <div class="expo-days">7–9</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:4px;">2026</div>
+      </div>
+      <div>
+        <div class="expo-title">Animethon 2026</div>
+        <div class="expo-desc">Canada's longest-running anime convention (since 1994) at the Edmonton Convention Centre. Voice actor guests, Japanese musical acts, cosplay contests, 70,000+ sq ft of exhibitor and artist alley space, e-sports, tabletop gaming. 10,000+ attendees annually. Note: runs the same weekend as Cariwest, Folk Fest, and Pigeon Lake — Edmonton's most absurdly stacked weekend of the year.</div>
+        <div class="expo-footer">
+          <span class="price-tag">Tickets TBA (~$30–60/day)</span>
+          <span class="badge b-primary">All Ages</span>
+          <a class="btn" href="https://animethon.org/" target="_blank">Get Tickets</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="expo-card">
+      <div class="expo-date-block">
+        <div class="expo-month">Sep</div>
+        <div class="expo-days">18–20</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:4px;">2026</div>
+      </div>
+      <div>
+        <div class="expo-title">Edmonton Expo (Fan Expo)</div>
+        <div class="expo-desc">40,000+ fans at Edmonton Convention Centre. Comics, sci-fi, horror, anime, gaming, and cosplay all under one roof. Celebrity guest autographs and photo ops, Sketch Duels, live Q&amp;A panels with film/TV stars, gaming booths, and a packed shopping floor. Fri 4PM–9PM (VIP preview 2PM), Sat 10AM–7PM, Sun 10AM–5PM.</div>
+        <div class="expo-footer">
+          <span class="price-tag">Tickets TBA (~$35–75/day)</span>
+          <span class="badge b-primary">All Ages</span>
+          <a class="btn" href="https://fanexpohq.com/edmontonexpo/" target="_blank">Get Tickets</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<hr class="div">
+
+<!-- ═══════════════════════════════════
+     06 — SPORTS EVENTS
+════════════════════════════════════ -->
+<div id="sports" class="section-alt">
+<div class="section">
+  <div class="section-head">
+    <div class="big-num">06</div>
+    <div>
+      <p class="section-label">Live Sport</p>
+      <h2 class="section-title">Sports Events</h2>
+      <p class="section-count">4 major events + ongoing CFL season</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="card accent-green">
+      <p class="card-date">Aug 17 – 23, 2026</p>
+      <h3 class="card-title">🏌️ CPKC Women's Open (LPGA)</h3>
+      <p class="card-desc">Canada's ONLY LPGA Tour event returns to Edmonton at historic Royal Mayfair Golf Club. The best women golfers on the planet compete all week — defending champ Brooke Henderson expected back. LPGA Tournament of the Year in 2022 and 2023. Proceeds support Stollery Children's Hospital ($3.9M goal).</p>
+      <div class="card-footer">
+        <span class="price-tag">Grounds tickets available</span>
+        <span class="badge b-green">Royal Mayfair Golf Club</span>
+        <a class="btn" href="https://www.cpkcwomensopen.com/" target="_blank">Get Tickets</a>
+      </div>
+    </div>
+
+    <div class="card accent-primary">
+      <p class="card-date">All Summer Long</p>
+      <h3 class="card-title">🏈 Edmonton Elks (CFL)</h3>
+      <p class="card-desc">The Elks play their CFL home schedule at Commonwealth Stadium all summer — the same venue as Post Malone, AC/DC, and Guns N' Roses. Fast-paced Canadian football, great stadium atmosphere, and tickets at a fraction of NFL prices. Check the schedule for themed nights and giveaways.</p>
+      <div class="card-footer">
+        <span class="price-tag">Tickets from ~$20–40</span>
+        <span class="badge b-primary">Commonwealth Stadium</span>
+        <a class="btn" href="https://www.esks.com/tickets/" target="_blank">Get Tickets</a>
+      </div>
+    </div>
+
+    <div class="card accent-blue">
+      <p class="card-date">July 18 – 19, 2026</p>
+      <h3 class="card-title">🏊 World Triathlon Cup Edmonton</h3>
+      <p class="card-desc">Elite international athletes compete in Sprint Triathlon and Mixed Relay events along the scenic River Valley — one of the most beautiful race courses in Canada. Free to watch along the entire course. Happens right in the middle of K-Days weekend — the city is absolutely electric.</p>
+      <div class="card-footer">
+        <span class="free-tag">FREE to watch</span>
+        <span class="badge b-blue">River Valley</span>
+      </div>
+    </div>
+
+    <div class="card accent-teal">
+      <p class="card-date">Mid-August</p>
+      <h3 class="card-title">🐉 Edmonton Dragon Boat Festival</h3>
+      <p class="card-desc">Annual dragon boat racing at Louise McKinney Riverfront Park. Teams race head-to-head in the North Saskatchewan River — a spectacle of colour, drumbeats, and energy. The Chinatown Dragon Festival runs nearby the same week with the Canadian National Lion Dance Championships and Taste of Chinatown.</p>
+      <div class="card-footer">
+        <span class="free-tag">FREE to watch</span>
+        <span class="badge b-teal">Louise McKinney Park</span>
+      </div>
+    </div>
+
+    <div class="card accent-orange">
+      <p class="card-date">Aug 16, 2026</p>
+      <h3 class="card-title">🏃 Servus Edmonton Marathon</h3>
+      <p class="card-desc">Thousands of athletes tackle a course through Edmonton's iconic river valley. Full marathon, half, 10K, 5K and more. Amazing to spectate even if you're not running — the energy along the course is infectious, especially near the finish line downtown.</p>
+      <div class="card-footer">
+        <span class="free-tag">Free to spectate</span>
+        <span class="badge b-orange">River Valley Route</span>
+        <a class="btn" href="https://www.servusedmontonmarathon.ca/" target="_blank">Info</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p style="font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;color:var(--primary-bright);margin-bottom:12px;">HAVE AN ABSOLUTELY UNREAL SUMMER 🤘</p>
+  <p style="margin-bottom:8px;">Compiled by Claude · March 2026 · Edmonton, AB</p>
+  <p style="color:var(--dim);margin-bottom:16px;">Prices, dates & lineups are subject to change. Always verify on official sites before buying tickets.</p>
+  <p style="font-size:11px;letter-spacing:3px;color:#2a1f42;text-transform:uppercase;">More events will be announced as summer approaches — this city doesn't sleep</p>
+</footer>
+
+</body>
+</html>
