@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob's Alberta Activity Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080613;
+  --bg2: #0f0a1e;
+  --bg3: #180f32;
+  --border: #261c48;
+  --text: #e8e0f5;
+  --muted: #7060a0;
+  --dim: #4a3878;
+  --accent: #a57bff;
+  --accent2: #ff79c8;
+  --gold: #ffd166;
+  --green: #05d6a0;
+  --blue: #4dc9f0;
+  --card: #110d22;
+  --tag-wc-bg: rgba(77,201,240,0.12);
+  --tag-wc: #4dc9f0;
+  --tag-sn-bg: rgba(255,121,200,0.12);
+  --tag-sn: #ff79c8;
+  --tag-fr-bg: rgba(5,214,160,0.12);
+  --tag-fr: #05d6a0;
+  --tag-in-bg: rgba(165,123,255,0.1);
+  --tag-in: #a57bff;
+  --tag-out-bg: rgba(255,209,102,0.1);
+  --tag-out: #ffd166;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+/* Ambient glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 15%, rgba(165,123,255,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 35% at 80% 85%, rgba(77,201,240,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 55% 50%, rgba(255,121,200,0.03) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+/* LAYOUT */
+.wrap { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; padding: 0 16px 80px; }
+
+/* HEADER */
+.site-header {
+  text-align: center;
+  padding: 48px 16px 32px;
+}
+.site-header .eyebrow {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+.site-header h1 {
+  font-family: 'Fraunces', serif; font-size: clamp(2.2rem, 7vw, 3.6rem); font-weight: 700; line-height: 1.05;
+  background: linear-gradient(135deg, #fff 0%, #c4a4ff 40%, #ff79c8 80%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 10px;
+}
+.site-header .sub {
+  color: var(--muted); font-size: 13px; max-width: 520px; margin: 0 auto;
+}
+
+/* TAB NAV */
+.tab-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(8,6,19,0.94); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px; margin: 0 -16px 28px;
+  display: flex; gap: 0; align-items: stretch;
+}
+.tab-btn {
+  background: none; border: none; color: var(--muted);
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  padding: 14px 20px; cursor: pointer; transition: all 0.15s;
+  border-bottom: 2px solid transparent; letter-spacing: 0.03em;
+  display: flex; align-items: center; gap: 6px;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-nav .spacer { flex: 1; }
+.tab-nav .source-note {
+  align-self: center;
+  font-size: 10px; color: var(--dim); padding-right: 4px;
+}
+.tab-nav .source-note a { color: var(--dim); text-decoration: none; }
+.tab-nav .source-note a:hover { color: var(--accent); }
+
+/* FILTER BAR */
+.filter-bar {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px; margin-bottom: 24px;
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+}
+.filter-group { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.filter-group-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--dim); margin-right: 2px;
+}
+.fbtn {
+  appearance: none; border: 1px solid var(--border); background: var(--bg2); color: var(--muted);
+  padding: 4px 11px; border-radius: 20px;
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600;
+  cursor: pointer; transition: all 0.12s; letter-spacing: 0.02em;
+}
+.fbtn:hover { border-color: var(--accent); color: var(--text); }
+.fbtn.on { font-weight: 700; }
+.fbtn.wc.on  { background: var(--tag-wc-bg); color: var(--tag-wc); border-color: var(--tag-wc); }
+.fbtn.sn.on  { background: var(--tag-sn-bg); color: var(--tag-sn); border-color: var(--tag-sn); }
+.fbtn.fr.on  { background: var(--tag-fr-bg); color: var(--tag-fr); border-color: var(--tag-fr); }
+.fbtn.cat.on { background: rgba(165,123,255,0.12); color: var(--accent); border-color: var(--accent); }
+.fbtn.wd.on  { background: rgba(165,123,255,0.12); color: var(--accent); border-color: var(--accent); }
+
+.filter-sep { width: 1px; background: var(--border); height: 20px; margin: 0 4px; }
+
+.result-count { margin-left: auto; font-size: 11px; color: var(--muted); }
+
+/* SECTIONS */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── PLACES ── */
+.section-group { margin-bottom: 36px; }
+.section-head {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+.section-head h2 {
+  font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--text);
+  white-space: nowrap;
+}
+.section-head .sline {
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+.section-head .scount {
+  font-size: 11px; color: var(--dim); background: var(--bg3); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 10px;
+}
+
+.venue-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px; margin-bottom: 8px;
+  transition: border-color 0.15s, transform 0.1s;
+  animation: popIn 0.25s ease both;
+}
+.venue-card:hover { border-color: var(--accent); transform: translateX(2px); }
+.venue-card.hidden { display: none !important; }
+
+@keyframes popIn { from { opacity:0; transform: translateY(3px); } to { opacity:1; transform: translateY(0); } }
+
+.venue-name {
+  font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline;
+}
+.venue-name a { color: inherit; text-decoration: none; }
+.venue-name a:hover { color: var(--accent); }
+
+.venue-desc { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+.venue-notes {
+  font-size: 11px; color: var(--dim); background: var(--bg2);
+  border-left: 2px solid var(--border); padding: 4px 10px; border-radius: 0 6px 6px 0;
+  margin-bottom: 6px;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.vtag {
+  font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.vtag-wheelchair { background: var(--tag-wc-bg); color: var(--tag-wc); border: 1px solid rgba(77,201,240,0.25); }
+.vtag-sensory    { background: var(--tag-sn-bg); color: var(--tag-sn); border: 1px solid rgba(255,121,200,0.25); }
+.vtag-free       { background: var(--tag-fr-bg); color: var(--tag-fr); border: 1px solid rgba(5,214,160,0.25); }
+.vtag-indoor     { background: var(--tag-in-bg); color: var(--tag-in); border: 1px solid rgba(165,123,255,0.18); }
+.vtag-outdoor    { background: var(--tag-out-bg); color: var(--tag-out); border: 1px solid rgba(255,209,102,0.18); }
+
+/* ── EVENTS ── */
+.weekend-block { margin-bottom: 36px; }
+.weekend-head {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+.weekend-head h2 {
+  font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700;
+}
+.weekend-head .wline { flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); }
+.weekend-head .wcount { font-size: 11px; color: var(--dim); background: var(--bg3); border: 1px solid var(--border); padding: 2px 8px; border-radius: 10px; }
+
+.day-chunk { margin-bottom: 10px; }
+.day-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--accent); padding-bottom: 5px; border-bottom: 1px solid var(--border); margin-bottom: 7px;
+}
+
+.ev-card {
+  display: flex; gap: 12px; padding: 10px 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  margin-bottom: 6px; transition: border-color 0.13s, transform 0.1s;
+  animation: popIn 0.25s ease both;
+}
+.ev-card:hover { border-color: var(--accent); transform: translateX(2px); }
+.ev-card.hidden { display: none !important; }
+
+.ev-time {
+  min-width: 60px; font-size: 11px; font-weight: 600; color: var(--muted);
+  padding-top: 1px; flex-shrink: 0;
+}
+.ev-time.allday { color: var(--dim); }
+.ev-body { flex: 1; min-width: 0; }
+.ev-title { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.35; }
+.ev-title a { color: inherit; text-decoration: none; }
+.ev-title a:hover { color: var(--accent); }
+.ev-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
+.etag {
+  font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 10px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.etag-wheelchair { background: var(--tag-wc-bg); color: var(--tag-wc); border: 1px solid rgba(77,201,240,0.25); }
+.etag-sensory    { background: var(--tag-sn-bg); color: var(--tag-sn); border: 1px solid rgba(255,121,200,0.25); }
+.etag-free       { background: var(--tag-fr-bg); color: var(--tag-fr); border: 1px solid rgba(5,214,160,0.25); }
+
+/* LEGEND */
+.legend {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;
+  font-size: 11px; color: var(--dim);
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+
+/* PASS BANNER */
+.pass-banner {
+  background: linear-gradient(135deg, rgba(255,209,102,0.08), rgba(165,123,255,0.08));
+  border: 1px solid rgba(255,209,102,0.25); border-radius: 12px;
+  padding: 14px 18px; margin-bottom: 24px; display: flex; align-items: flex-start; gap: 14px;
+}
+.pass-icon { font-size: 22px; flex-shrink: 0; }
+.pass-text strong { color: var(--gold); font-size: 13px; }
+.pass-text p { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.pass-text a { color: var(--gold); }
+
+/* EMPTY */
+.empty { text-align: center; padding: 40px; color: var(--muted); font-style: italic; }
+.empty.hidden { display: none; }
+
+/* FOOTER */
+.footer { text-align: center; font-size: 11px; color: var(--dim); padding-top: 20px; border-top: 1px solid var(--border); margin-top: 40px; }
+.footer a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 480px) {
+  .tab-btn { padding: 12px 12px; font-size: 12px; }
+  .filter-sep { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-header">
+  <div class="eyebrow">Edmonton, Alberta &amp; Beyond · Jacob's Guide</div>
+  <h1>The Complete<br>Family Activity Guide</h1>
+  <p class="sub">Permanent venues, day trips, and upcoming events — with wheelchair &amp; sensory info throughout.</p>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="places" onclick="switchTab('places',this)">📍 Places &amp; Venues</button>
+  <button class="tab-btn" data-tab="events" onclick="switchTab('events',this)">📅 Upcoming Events</button>
+  <div class="spacer"></div>
+  <div class="source-note">Events from <a href="https://www.familyfuncanada.com/edmonton/calendar/" target="_blank">familyfuncanada.com ↗</a></div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PLACES TAB                                                     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="tab-places" class="tab-panel active">
+
+  <div class="pass-banner">
+    <div class="pass-icon">🎟️</div>
+    <div class="pass-text">
+      <strong>Canada Strong Pass — Summer 2026</strong>
+      <p>Free admission under 17 + 50% off ages 18–24 at Alberta provincial heritage sites: Royal Alberta Museum, Reynolds-Alberta Museum, Royal Tyrrell Museum, Rutherford House.<br>
+      <strong>Valid June 19 – September 7, 2026.</strong> <a href="https://www.alberta.ca/canada-strong-pass" target="_blank">Details ↗</a></p>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="vtag vtag-wheelchair">♿ Wheelchair</span> Confirmed accessible venue</div>
+    <div class="legend-item"><span class="vtag vtag-sensory">🌟 Sensory</span> Sensory-friendly</div>
+    <div class="legend-item"><span class="vtag vtag-free">🆓 Free</span> Free or free tier</div>
+    <div class="legend-item"><span class="vtag vtag-indoor">🏠 Indoor</span></div>
+    <div class="legend-item"><span class="vtag vtag-outdoor">🌿 Outdoor</span></div>
+  </div>
+
+  <div class="filter-bar" id="place-filters">
+    <div class="filter-group">
+      <span class="filter-group-label">Access:</span>
+      <button class="fbtn wc" onclick="togglePlaceTag('wheelchair',this)">♿ Wheelchair</button>
+      <button class="fbtn sn" onclick="togglePlaceTag('sensory',this)">🌟 Sensory</button>
+      <button class="fbtn fr" onclick="togglePlaceTag('free',this)">🆓 Free</button>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group">
+      <span class="filter-group-label">Distance:</span>
+      <button class="fbtn cat" onclick="togglePlaceDist('city',this)">Edmonton City</button>
+      <button class="fbtn cat" onclick="togglePlaceDist('sherwood',this)">Sherwood Park</button>
+      <button class="fbtn cat" onclick="togglePlaceDist('near',this)">~1 hr away</button>
+      <button class="fbtn cat" onclick="togglePlaceDist('daytrip',this)">Day Trip</button>
+    </div>
+    <div class="result-count" id="places-count"></div>
+  </div>
+
+  <div id="places-root"></div>
+  <div class="empty hidden" id="places-empty">No venues match your filters.</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- EVENTS TAB                                                     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="tab-events" class="tab-panel">
+
+  <div class="legend">
+    <div class="legend-item"><span class="etag etag-wheelchair">♿ Wheelchair</span> Known accessible venue</div>
+    <div class="legend-item"><span class="etag etag-sensory">🌟 Sensory</span> Sensory-friendly</div>
+    <div class="legend-item"><span class="etag etag-free">🆓 Free</span> Free admission</div>
+    <div class="legend-item" style="margin-left:auto;font-size:10px">⚠ Always confirm accessibility before going</div>
+  </div>
+
+  <div class="filter-bar" id="event-filters">
+    <div class="filter-group">
+      <span class="filter-group-label">Weekend:</span>
+      <button class="fbtn wd on" onclick="setEvWeekend('all',this)">All</button>
+      <span id="ev-weekend-btns"></span>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group">
+      <span class="filter-group-label">Show:</span>
+      <button class="fbtn wc" onclick="toggleEvTag('wheelchair',this)">♿ Wheelchair</button>
+      <button class="fbtn sn" onclick="toggleEvTag('sensory',this)">🌟 Sensory</button>
+      <button class="fbtn fr" onclick="toggleEvTag('free',this)">🆓 Free</button>
+    </div>
+    <div class="result-count" id="ev-count"></div>
+  </div>
+
+  <div id="events-root"></div>
+  <div class="empty hidden" id="events-empty">No events match your filters.</div>
+</div>
+
+<div class="footer">
+  Places research compiled from Edmonton rec guides &amp; accessibility databases. 
+  Event data from <a href="https://calendar.google.com/calendar/embed?src=edmonton%40familyfuncanada.com" target="_blank">Edmonton Family Fun Google Calendar</a>. 
+  Always call ahead to confirm accessibility for complex needs.
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+
+const VENUES = [
+  // ── WHEELCHAIR-FIRST ──────────────────────────────────────────
+  {
+    name: "We Rock The Spectrum — Edmonton",
+    cat: "wheelchair",
+    tags: ["wheelchair","sensory","indoor"],
+    dist: "city",
+    desc: "Gym built specifically for kids with disabilities. Zip line, trampolines, crash pads — all wheelchair-accessible. Actively serves families with autism, CP, and mobility needs.",
+    url: "https://www.werockthespectrumedmonton.ca",
+    notes: "Book ahead. Sensory-friendly by design."
+  },
+  {
+    name: "TELUS World of Science — Edmonton",
+    cat: "wheelchair",
+    tags: ["wheelchair","sensory","indoor"],
+    dist: "city",
+    desc: "Fully accessible. Features an Accessible Care Room with powered patient lift and powered medical bed — one of the best facilities in the city for complex medical needs.",
+    url: "https://telusworldofscienceedmonton.ca",
+    notes: "Accessible Care Room with powered patient lift + powered medical bed. IMAX, planetarium, hands-on science."
+  },
+  {
+    name: "Royal Alberta Museum (RAM)",
+    cat: "wheelchair",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Completely flat and accessible throughout. Unique draw: adult-size change table with hoist/transfer lift — extremely rare and a game-changer for Jacob.",
+    url: "https://royalalbertamuseum.ca",
+    notes: "Adult-size change table with hoist + transfer lift. Human History Hall, Natural History Hall."
+  },
+  {
+    name: "Clareview Inclusive Playground",
+    cat: "wheelchair",
+    tags: ["wheelchair","outdoor","free"],
+    dist: "city",
+    desc: "15,000 sq ft pour-in-pour rubber surface. Exceeds CSA Annex H accessibility standards. Designed specifically for kids with physical disabilities.",
+    url: "https://www.edmonton.ca/activities_parks_recreation/parks_rivervalley/clareview-community-recreation-centre",
+    notes: "One of Edmonton's best truly inclusive playgrounds."
+  },
+  {
+    name: "Muttart Conservatory",
+    cat: "wheelchair",
+    tags: ["wheelchair","sensory","indoor","outdoor"],
+    dist: "city",
+    desc: "Four glass pyramids with tropical, arid, feature, and temperate environments. KultureCity certified. Paved paths throughout, fully accessible.",
+    url: "https://www.edmonton.ca/attractions_events/muttart-conservatory",
+    notes: "KultureCity certified. Sensory bags available."
+  },
+  {
+    name: "Edmonton Valley Zoo",
+    cat: "wheelchair",
+    tags: ["wheelchair","sensory","outdoor"],
+    dist: "city",
+    desc: "Paved paths throughout, fully accessible. KultureCity certified. Sensory bags available at entrance.",
+    url: "https://www.edmonton.ca/attractions_events/edmonton-valley-zoo",
+    notes: "KultureCity certified. Sensory bags at front gate. Compact zoo, good for shorter visits."
+  },
+  {
+    name: "John Janzen Nature Centre",
+    cat: "wheelchair",
+    tags: ["wheelchair","sensory","indoor","outdoor"],
+    dist: "city",
+    desc: "Hands-on nature exhibits. KultureCity certified. Adjacent to Fort Edmonton Park.",
+    url: "https://www.edmonton.ca/attractions_events/john-janzen-nature-centre",
+    notes: "KultureCity certified."
+  },
+  {
+    name: "Art Gallery of Alberta (AGA)",
+    cat: "wheelchair",
+    tags: ["wheelchair","indoor","free"],
+    dist: "city",
+    desc: "Fully accessible contemporary art gallery. Free admission last Thursday of each month 4–7 PM.",
+    url: "https://www.youraga.ca",
+    notes: "Free Thursdays 4–7 PM (last Thu of month). Elevator access throughout."
+  },
+
+  // ── SENSORY-FRIENDLY ──────────────────────────────────────────
+  {
+    name: "Sensory Festival (Annual — April)",
+    cat: "sensory",
+    tags: ["sensory","wheelchair","indoor"],
+    dist: "city",
+    desc: "Edmonton's premier inclusive arts festival. Sensory-friendly spaces, tactile art, ASL interpretation, quiet zones. Supports Autism Edmonton.",
+    url: "https://www.familyfuncanada.com/edmonton/sensory-festival/",
+    notes: "Annual event every April. Gala (evening) + Community Festival (daytime)."
+  },
+  {
+    name: "Edmonton Public Library — Spring Break Programming",
+    cat: "sensory",
+    tags: ["sensory","wheelchair","indoor","free"],
+    dist: "city",
+    desc: "All EPL branches are fully accessible. Spring and summer programming regularly includes sensory-friendly and adaptive activities.",
+    url: "https://www.epl.ca",
+    notes: "Free. All branches wheelchair accessible."
+  },
+  {
+    name: "Little Bits Therapeutic Riding",
+    cat: "sensory",
+    tags: ["sensory","outdoor"],
+    dist: "near",
+    desc: "Therapeutic horseback riding for children with physical and cognitive disabilities. One of the most impactful adaptive recreation options in the region.",
+    url: "https://www.littlebits.ca",
+    notes: "Requires registration. Program fills fast — book well ahead."
+  },
+  {
+    name: "Strathma Saturdays — Strathcona County Museum",
+    cat: "sensory",
+    tags: ["sensory","wheelchair","indoor","free"],
+    dist: "sherwood",
+    desc: "Every Saturday 10AM–4PM. Free crafts and activities. Calm, low-sensory environment. Great recurring option close to home in Sherwood Park.",
+    url: "https://www.strathcona.ca/services/arts-culture-heritage/strathcona-county-museum-archives/",
+    notes: "Free. Every Saturday. Right in Sherwood Park."
+  },
+  {
+    name: "Rapid Fire Theatre — Kidding Around",
+    cat: "sensory",
+    tags: ["sensory","wheelchair","indoor"],
+    dist: "city",
+    desc: "Family improv comedy show every Saturday at 1:30 PM. Accessible venue, relaxed atmosphere, great for kids who enjoy unpredictable and funny performances.",
+    url: "https://www.rapidfiretheatre.com",
+    notes: "Every Saturday 1:30 PM. Fully accessible theatre."
+  },
+
+  // ── INDOOR YEAR-ROUND ──────────────────────────────────────────
+  {
+    name: "West Edmonton Mall (WEM) — Sea Life Caverns + Attractions",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Massive indoor mall with Sea Life Caverns, ice rink, waterpark, minigolf. All accessible. Good rainy-day or winter option.",
+    url: "https://www.wem.ca",
+    notes: "Sea Life Caverns has Marine Life Play and Learn programming some days."
+  },
+  {
+    name: "Citadel Theatre — Family Shows",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Fully accessible major theatre. Family productions throughout the year. Excellent venue.",
+    url: "https://citadeltheatre.com",
+    notes: "Elevator access, accessible seating. Check schedule for family/kids shows."
+  },
+  {
+    name: "Northern Alberta Jubilee Auditorium",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Major performance venue. Accessible seating. Hosts Broadway touring shows, symphony performances, and family concerts.",
+    url: "https://jubileeauditorium.com/edmonton",
+    notes: "Fully wheelchair accessible. Broadway Across Canada, concerts."
+  },
+  {
+    name: "Edmonton Expo Centre",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Large convention centre hosting major family events, expos, and touring shows throughout the year.",
+    url: "https://www.edmontonexpocentre.com",
+    notes: "Fully accessible. Check event calendar."
+  },
+  {
+    name: "City of Edmonton Indoor Pools",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Multiple accessible pools across Edmonton with aquatic wheelchairs, change tables, and adaptive programming.",
+    url: "https://www.edmonton.ca/activities_parks_recreation/swimming",
+    notes: "Leisure Access Program for reduced fees. Multiple locations."
+  },
+
+  // ── OUTDOOR EDMONTON ──────────────────────────────────────────
+  {
+    name: "Jurassic Forest — Gibbons (NE, ~45 min)",
+    cat: "outdoor",
+    tags: ["wheelchair","outdoor"],
+    dist: "near",
+    desc: "Life-size animatronic dinosaurs along boardwalk trails through boreal forest. Boardwalks are wheelchair accessible per multiple visitor reviews.",
+    url: "https://www.jurassicforest.com",
+    notes: "~45 min NE of Sherwood Park. Boardwalk trails. Very memorable for kids."
+  },
+  {
+    name: "Hawrelak Park",
+    cat: "outdoor",
+    tags: ["wheelchair","outdoor","free"],
+    dist: "city",
+    desc: "Large river valley park with paved paths, lake, pavilion. Hosts major festivals including Heritage Festival (Aug 1–3, 2026 — free admission).",
+    url: "https://www.edmonton.ca/activities_parks_recreation/parks_rivervalley/william-hawrelak-park",
+    notes: "Heritage Festival Aug 1–3, 2026 (returning to Hawrelak). Paved paths throughout."
+  },
+  {
+    name: "Edmonton River Valley Trail System",
+    cat: "outdoor",
+    tags: ["outdoor","wheelchair","free"],
+    dist: "city",
+    desc: "North America's largest urban parkland. Many paved accessible paths along the river. Great for wheelchair strolls.",
+    url: "https://www.edmonton.ca/activities_parks_recreation/parks_rivervalley",
+    notes: "Free. Many paved sections. Accessible from multiple entry points."
+  },
+
+  // ── SEASONAL ──────────────────────────────────────────────────
+  {
+    name: "ChocoFest — Sherwood Park (Annual, late April)",
+    cat: "seasonal",
+    tags: ["wheelchair","indoor"],
+    dist: "sherwood",
+    desc: "Annual chocolate festival at Millennium Place, Sherwood Park. Kids 12 & under free on Saturday. Large accessible venue right in town.",
+    url: "https://www.familyfuncanada.com/edmonton/chocofest/",
+    notes: "Annual late April. Millennium Place is fully accessible."
+  },
+  {
+    name: "Heritage Festival — Hawrelak Park (Aug 1–3, 2026)",
+    cat: "seasonal",
+    tags: ["outdoor","free"],
+    dist: "city",
+    desc: "Free multicultural food and culture festival returning to Hawrelak Park. 60+ cultures represented. Free admission.",
+    url: "https://www.heritagefest.ca",
+    notes: "Aug 1–3, 2026. Free. Hawrelak Park. Paved paths."
+  },
+  {
+    name: "ICE District Outdoor Events",
+    cat: "seasonal",
+    tags: ["wheelchair","outdoor","free"],
+    dist: "city",
+    desc: "Fan Park hosts free community events including movie days, concerts, and seasonal programming. Accessible paved area.",
+    url: "https://icedistrict.com",
+    notes: "Check schedule. Free movie days in heated tent."
+  },
+
+  // ── JUST OUTSIDE EDMONTON (30–50 min) ─────────────────────────
+  {
+    name: "Alberta Railway Museum — NE Edmonton (~30 min)",
+    cat: "near",
+    tags: ["outdoor","wheelchair"],
+    dist: "near",
+    desc: "Historic steam locomotives and railway cars. Outdoor museum with a genuinely different sensory experience from typical indoor venues.",
+    url: "https://albertarailwaymuseum.com",
+    notes: "~30 min NE. Seasonal. Check open dates."
+  },
+  {
+    name: "Snow Goose Festival — Tofield (~1 hr east)",
+    cat: "near",
+    tags: ["outdoor"],
+    dist: "near",
+    desc: "Annual April wildlife festival celebrating massive snow goose migration at Beaverhill Lake. Extraordinary nature spectacle — nothing else like it nearby.",
+    url: "https://www.familyfuncanada.com/edmonton/snow-goose-festival-tours/",
+    notes: "Annual late April. ~1 hr east. Very accessible flat terrain."
+  },
+  {
+    name: "Elk Island National Park (~35 min east)",
+    cat: "near",
+    tags: ["outdoor"],
+    dist: "near",
+    desc: "Bison herds roam free. Accessible viewing areas and paved sections of the trail. Free under 17 with Canada Strong Pass.",
+    url: "https://www.pc.gc.ca/en/pn-np/ab/elkisland",
+    notes: "Free under 17 (Parks Canada). Paved accessible sections."
+  },
+
+  // ── WETASKIWIN (~1 hr S) ──────────────────────────────────────
+  {
+    name: "Reynolds-Alberta Museum — Wetaskiwin",
+    cat: "daytrip",
+    tags: ["wheelchair","indoor"],
+    dist: "daytrip",
+    desc: "World-class collection of vintage aircraft, cars, and farm machinery. Fully accessible. Free under 17 with Canada Strong Pass (June 19–Sept 7, 2026).",
+    url: "https://reynoldsmuseum.ca",
+    notes: "~1 hr south. Canada Strong Pass: FREE under 17, Jun 19–Sep 7. Full accessibility."
+  },
+
+  // ── RED DEER (~1.5 hr S) ──────────────────────────────────────
+  {
+    name: "Discovery Wildlife Park — Innisfail (~1.25 hr S)",
+    cat: "daytrip",
+    tags: ["outdoor","wheelchair"],
+    dist: "daytrip",
+    desc: "Zoo and wildlife park with bears, big cats, and more. Very different from Edmonton's zoo. Paved accessible paths.",
+    url: "https://www.discoverywildlifepark.com",
+    notes: "~1.25 hr south near Innisfail. More rugged feel than Valley Zoo."
+  },
+  {
+    name: "Innisfail Historical Village (~1.25 hr S)",
+    cat: "daytrip",
+    tags: ["wheelchair","outdoor"],
+    dist: "daytrip",
+    desc: "Restored heritage village. All but one building wheelchair accessible — unusual for an outdoor heritage site.",
+    url: "https://innisfailhistoricalvillage.ca",
+    notes: "~1.25 hr south. Nearly fully wheelchair accessible outdoors."
+  },
+
+  // ── STETTLER (~2 hr E) ────────────────────────────────────────
+  {
+    name: "Alberta Prairie Railway — Stettler (~2 hr E)",
+    cat: "daytrip",
+    tags: ["outdoor"],
+    dist: "daytrip",
+    desc: "Scenic steam train excursions through prairie landscape. Runs Polar Express in winter. Unique experience for train-loving kids.",
+    url: "https://www.absteamtrain.com",
+    notes: "~2 hr east. Check accessibility when booking — older train cars."
+  },
+
+  // ── DRUMHELLER (~2.5 hr SE) ──────────────────────────────────
+  {
+    name: "Royal Tyrrell Museum — Drumheller",
+    cat: "daytrip",
+    tags: ["wheelchair","indoor"],
+    dist: "daytrip",
+    desc: "World-renowned dinosaur museum. Fully accessible. Free under 17 with Canada Strong Pass (June 19–Sept 7, 2026). One of the best museums in Canada.",
+    url: "https://tyrrellmuseum.com",
+    notes: "~2.5 hr SE. Canada Strong Pass: FREE under 17, Jun 19–Sep 7. Fully accessible."
+  },
+  {
+    name: "Hoodoos and Badlands Viewpoints — Drumheller",
+    cat: "daytrip",
+    tags: ["outdoor","free"],
+    dist: "daytrip",
+    desc: "Dramatic badlands landscape unlike anything near Edmonton. Many pulloff viewpoints fully accessible from vehicle. The Hoodoos Trail has a paved section.",
+    url: "https://www.traveldrumheller.com",
+    notes: "Viewpoints accessible from car. Horseshoe Canyon has accessible viewpoint."
+  },
+
+  // ── SUPPORT ORGS ──────────────────────────────────────────────
+  {
+    name: "Leisure Access Program (City of Edmonton)",
+    cat: "support",
+    tags: ["free"],
+    dist: "city",
+    desc: "City of Edmonton program providing subsidized recreation passes for people with disabilities and low-income families.",
+    url: "https://www.edmonton.ca/activities_parks_recreation/leisure-access-program",
+    notes: "Reduced fees for City rec centres, pools, programs."
+  },
+  {
+    name: "Access 2 Card",
+    cat: "support",
+    tags: ["free","wheelchair"],
+    dist: "city",
+    desc: "National program: paid support worker gets free admission at 1,000+ venues when accompanying a person with a disability. Worth getting if you don't have one.",
+    url: "https://access2card.ca",
+    notes: "Free card. Valid nationally."
+  },
+  {
+    name: "KultureCity Venues",
+    cat: "support",
+    tags: ["sensory"],
+    dist: "city",
+    desc: "KultureCity-certified venues in Edmonton: Valley Zoo, Muttart, John Janzen. Sensory bags available at front desk — noise-cancelling headphones, fidgets, visual aids.",
+    url: "https://www.kulturecity.org",
+    notes: "Free sensory bags at certified venues. No need to ask — just request at desk."
+  },
+  {
+    name: "Canada Strong Pass — Summer 2026",
+    cat: "support",
+    tags: ["free","wheelchair"],
+    dist: "city",
+    desc: "Free admission under 17 + 50% off ages 18–24 at all Alberta provincial heritage sites: Royal Alberta Museum, Reynolds-Alberta Museum, Royal Tyrrell Museum, Rutherford House. Valid June 19 – September 7, 2026.",
+    url: "https://www.alberta.ca/canada-strong-pass",
+    notes: "Valid Jun 19–Sep 7, 2026. FREE for Jacob."
+  },
+  // ── NEW VENUES FROM CALENDAR EVENTS ─────────────────────────
+
+  // ── FARMERS MARKETS & MARKETS ────────────────────────────────
+  {
+    name: "Old Strathcona Farmers Market",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Edmonton's original indoor year-round farmers market in the Old Bus Barn off Whyte Ave. Open Saturdays 8AM–3PM and Sundays 11AM–3PM. Hosts Market Buds monthly — kids earn a $5 token to spend with vendors.",
+    url: "https://osfm.ca",
+    notes: "Wheelchair accessible. Free parking across Gateway Blvd. Market Buds kids program runs select Saturdays."
+  },
+  {
+    name: "Bountiful Farmers Market",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "Large indoor year-round market on Edmonton's south side with 120+ local vendors. Open Fri 10AM–4PM, Sat 9AM–4PM, Sun 10AM–4PM. Family-friendly with lots of food options and a kids area.",
+    url: "https://bountifulmarkets.com",
+    notes: "3696 97 St NW, Edmonton. Accessible parking. Indoor. Free entry."
+  },
+
+  // ── MUSEUMS & ATTRACTIONS ─────────────────────────────────────
+  {
+    name: "Alberta Aviation Museum",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "city",
+    desc: "30+ restored historic aircraft in an authentic WWII double hangar. Includes flight simulators and a children's Discovery Backpack program. One of Edmonton's most unique sensory environments — big, open spaces with giant machines.",
+    url: "https://albertaaviationmuseum.com",
+    notes: "11410 Kingsway NW. Wheelchair accessible with accessible washrooms. Call ahead for complex mobility needs — it's a heritage hangar. Closed Mon–Wed (winter)."
+  },
+  {
+    name: "Edmonton Riverboat (The Edmonton Queen)",
+    cat: "seasonal",
+    tags: ["wheelchair","outdoor"],
+    dist: "city",
+    desc: "Scenic dinner and brunch cruises on the North Saskatchewan River. Operates May–September. Wheelchair lift to lower deck — non-motorized wheelchairs only. Access2 card holders get a free support person admission.",
+    url: "https://edmontonriverboat.ca",
+    notes: "9734 98 Ave NW. Seasonal May–Sept. Wheelchair lift exists but call ahead to confirm it's operational. Inclined path from parking lot — vehicle drop-off at dock available for mobility needs."
+  },
+
+  // ── SHERWOOD PARK ─────────────────────────────────────────────
+  {
+    name: "Millennium Place — Sherwood Park",
+    cat: "indoor",
+    tags: ["wheelchair","sensory","indoor"],
+    dist: "sherwood",
+    desc: "Strathcona County's massive multi-purpose rec centre. Wave pool, leisure ice, twin arenas, gym, indoor playground, track. Fully accessible with wheelchair parking, ramps, elevators, sling lift in pool, and zero-depth pool entries.",
+    url: "https://www.strathcona.ca/recreation-events/recreation-centres/millennium-place/",
+    notes: "2000 Premier Way, Sherwood Park. Fully accessible including pool. Sling lift and aquatic transfer chairs available. Staff trained for specialized needs. Also hosts major events (ChocoFest, YEGPIN, etc.)."
+  },
+  {
+    name: "The Makery",
+    cat: "indoor",
+    tags: ["sensory","indoor"],
+    dist: "sherwood",
+    desc: "Kids STEAM exploration space in Sherwood Park with STEM Lab, Move Lab, Mess Lab (sensory tables, slime), and Light Lab. Hosts weekly Slime Lab drop-in sessions Sundays at 1PM, birthday parties, and PD day camps. Ages 2–12.",
+    url: "https://www.themakeryspace.com",
+    notes: "52 Sioux Rd #107, Sherwood Park. Sock-foot environment — clean indoor shoes are an option for mobility needs. Book ahead for workshops."
+  },
+  {
+    name: "Salisbury Greenhouse — Sherwood Park",
+    cat: "outdoor",
+    tags: ["wheelchair","outdoor","indoor"],
+    dist: "sherwood",
+    desc: "Alberta's largest family greenhouse with year-round kids workshops, a Thursday farmers market, and seasonal events. Kids workshops include planters, painted pots, terrarium builds, and sensory gardens. The large indoor greenhouse itself makes a great low-key outing.",
+    url: "https://salisburygreenhouse.com",
+    notes: "52337 Range Road 232, Sherwood Park. Wheelchair accessible. Free parking. Kids workshops require booking via Eventbrite."
+  },
+  {
+    name: "Emerald Hills Sports Pavilion",
+    cat: "outdoor",
+    tags: ["wheelchair","outdoor"],
+    dist: "sherwood",
+    desc: "Strathcona County outdoor sports complex with artificial turf, baseball diamonds, and a heated pavilion with washrooms. Hosts large community events including the annual Easter 100,000-egg hunt.",
+    url: "https://www.strathcona.ca/recreation-events/parks-and-trails/parks-trails-sports-venues/emerald-hills-regional-park/",
+    notes: "4501 Emerald Drive, Sherwood Park. Accessible parking available."
+  },
+
+  // ── ST. ALBERT / NEARBY ───────────────────────────────────────
+  {
+    name: "Servus Credit Union Place — St. Albert",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "near",
+    desc: "St. Albert's massive recreation centre with arenas, aquatic centre (wave pool, lazy river, hot tub), fitness centre, indoor playground, and field houses. Comparable to Millennium Place. Hosts the St. Albert Lifestyle Expo in April.",
+    url: "https://stalbert.ca/rec/facilities/servus/",
+    notes: "400 Campbell Road, St. Albert (~25 min from Sherwood Park). Fully accessible. Call ahead for specific aquatic accessibility needs."
+  },
+  {
+    name: "Salisbury at Enjoy — St. Albert",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "near",
+    desc: "Salisbury Greenhouse's St. Albert location inside The Enjoy Centre. Kids workshops, seasonal planters, and crafts throughout the year. Same programming as the Sherwood Park location.",
+    url: "https://salisburygreenhouse.com",
+    notes: "Inside The Enjoy Centre, St. Albert (~30 min). Wheelchair accessible."
+  },
+
+  // ── MADE BY MARCUS (ICE CREAM WORKSHOPS) ─────────────────────
+  {
+    name: "Made by Marcus — Mill Creek",
+    cat: "indoor",
+    tags: ["indoor"],
+    dist: "city",
+    desc: "Artisan ice cream shop hosting Sundae School — a parent-assisted kids workshop where children make their own batch of ice cream, build a sundae, and learn about the science behind it. Sunday sessions 12–4PM. Also has Whyte Ave and Brewery District locations.",
+    url: "https://madebymarcus.ca",
+    notes: "9853 89 Ave NW, Edmonton. Sundae School is paid — book ahead. Sessions book out quickly."
+  },
+
+  // ── LEDUC ─────────────────────────────────────────────────────
+  {
+    name: "Maclab Centre for the Performing Arts — Leduc",
+    cat: "indoor",
+    tags: ["wheelchair","indoor"],
+    dist: "daytrip",
+    desc: "450-seat performing arts theatre run by the City of Leduc, about 30 minutes south of Edmonton. Hosts Broadway tours, concerts, and family shows. Excellent wheelchair accessibility and an audio hearing loop.",
+    url: "https://maclabcentre.com",
+    notes: "4308 50th Street, Leduc (~30 min south). Full wheelchair access, audio loop. Wheelchair tickets through box office only. Free parking."
+  },
+
+];
+
+
+const EVENTS = [{"title": "FREE Easter Fun | LEGO Stores", "date": "2026-04-03", "dayName": "Friday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/free-lego-make-take"}, {"title": "EPL Spring Break Programming", "date": "2026-04-03", "dayName": "Friday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/edmonton-public-library-spring-break"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-03", "dayName": "Friday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "TELUS World of Science - Edmonton Jurassic World by Brickman", "date": "2026-04-03", "dayName": "Friday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/telus-world-of-science-jurassic-world"}, {"title": "Dino-Mite Spring Break | TELUS World of Science - Edmonton", "date": "2026-04-03", "dayName": "Friday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-easter-programming-at-telus-world-of-science-edmonton"}, {"title": "Read with the RCMP | Strathcona County Library", "date": "2026-04-03", "dayName": "Friday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/read-with-rcmp-strathcona-library"}, {"title": "Easter Bunny Photos | Bountiful Farmers' Market", "date": "2026-04-03", "dayName": "Friday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-bountiful-farmers-market"}, {"title": "Real Bunny & Sleeping Princess Photos | A Charmed Affair", "date": "2026-04-03", "dayName": "Friday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/meet-greets-a-charmed-affair"}, {"title": "Kiwi's Easter Scavenger Hunt | Kiwi Nurseries", "date": "2026-04-03", "dayName": "Friday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-egg-scavenger-hunt-at-kiwi-nurseries"}, {"title": "Kids' Break Events | Indigo/Chapters", "date": "2026-04-03", "dayName": "Friday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-at-indigo-and-chapters"}, {"title": "Meet the Easter Bunny | Bass Pro Shops", "date": "2026-04-03", "dayName": "Friday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/easter-bunny-at-cabelas"}, {"title": "Good Friday Sugar Shack Experience | Chartier (Beaumont)", "date": "2026-04-03", "dayName": "Friday", "time": "12:30 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/good-friday-sugar-shack-experience"}, {"title": "Board Games Day | Mastermind Toys", "date": "2026-04-03", "dayName": "Friday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-at-mastermind-toys"}, {"title": "Spring Break Week | Mill Woods Town Centre", "date": "2026-04-03", "dayName": "Friday", "time": "2:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/march-break-with-mill-woods-town-centre"}, {"title": "The Downtown Defrost | Churchill Square", "date": "2026-04-03", "dayName": "Friday", "time": "3:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-downtown-defrost"}, {"title": "Meet Mario & Friends | Cineplex Sherwood Park", "date": "2026-04-03", "dayName": "Friday", "time": "3:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/meet-mario-cineplex-sherwood-park"}, {"title": "FREE Easter Fun | LEGO Stores", "date": "2026-04-04", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/free-lego-make-take"}, {"title": "EPL Spring Break Programming", "date": "2026-04-04", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/edmonton-public-library-spring-break"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-04", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "Market Buds | Old Strathcona Farmers Market", "date": "2026-04-04", "dayName": "Saturday", "time": "8:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/market-buds-at-old-strathcona-farmers-market"}, {"title": "TELUS World of Science - Edmonton Jurassic World by Brickman", "date": "2026-04-04", "dayName": "Saturday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/telus-world-of-science-jurassic-world"}, {"title": "Easter Breakfast & Egg Hunt | Woodbend Hall", "date": "2026-04-04", "dayName": "Saturday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-at-woodbend-hall"}, {"title": "Dino-Mite Spring Break | TELUS World of Science - Edmonton", "date": "2026-04-04", "dayName": "Saturday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-easter-programming-at-telus-world-of-science-edmonton"}, {"title": "Easter Egg Hunt | Millhurst Community League", "date": "2026-04-04", "dayName": "Saturday", "time": "9:30 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/millhurst-community-league-easter-egg-hunt"}, {"title": "Workshop for Little Gardeners | RONA Stores", "date": "2026-04-04", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/rona-kids-workshop"}, {"title": "FREE 100,000 Egg Hunt | Emerald Hills Sports Pavilion", "date": "2026-04-04", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "free"], "url": "https://www.familyfuncanada.com/edmonton/strathcona-county-egg-hunt"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-04-04", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "Dip-Dye Easter Eggs | The Carrot Coffeehouse", "date": "2026-04-04", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-carrot-coffeehouse"}, {"title": "DIY Easter Planter | Salisbury at Enjoy (St. Albert)", "date": "2026-04-04", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kids-workshops-at-salisbury-greenhouses"}, {"title": "Meet the Easter Bunny | Bass Pro Shops", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/easter-bunny-at-cabelas"}, {"title": "Easter Bunny Photos | Bountiful Farmers' Market", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-bountiful-farmers-market"}, {"title": "FREE Easter Egg Hunt | Vision RV", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/easter-egg-hunt-vision-rv"}, {"title": "Easter Create & Paint with Indigo Kids | Indigo (Sherwood Park)", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/create-paint-with-indigo-kids"}, {"title": "Kiwi's Easter Scavenger Hunt | Kiwi Nurseries", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-egg-scavenger-hunt-at-kiwi-nurseries"}, {"title": "Kids' Break Events | Indigo/Chapters", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-at-indigo-and-chapters"}, {"title": "Jubilations Junior: Petey Paan's Pirate Adventure", "date": "2026-04-04", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/jubilations-junior"}, {"title": "Concordia Easter Egg Hunt | Magrath Campus", "date": "2026-04-04", "dayName": "Saturday", "time": "12:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/easter-egg-hunt-at-concordia-university"}, {"title": "Easter Fun | Muttart Conservatory", "date": "2026-04-04", "dayName": "Saturday", "time": "12:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/easter-muttart-conservatory"}, {"title": "Easter Hunt | Queen Mary's Market", "date": "2026-04-04", "dayName": "Saturday", "time": "12:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-queen-marys-market"}, {"title": "FREE Slime Making Station | Bountiful Farmers' Market", "date": "2026-04-04", "dayName": "Saturday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/slime-bountiful-farmers-market"}, {"title": "Meet Mario & Friends | Cineplex Sherwood Park", "date": "2026-04-04", "dayName": "Saturday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/meet-mario-cineplex-sherwood-park"}, {"title": "Easter Egg Hunt | Farmer & Daughter Toy Shop", "date": "2026-04-04", "dayName": "Saturday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/farmer-and-daughter-toy-shop"}, {"title": "FernGully: The Last Rainforest | Metro Reel Family Cinema", "date": "2026-04-04", "dayName": "Saturday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/reel-family-cinema"}, {"title": "Inclusive Easter Egg Hunt | Dynamyx Gymnastics Club", "date": "2026-04-04", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/dynamyx-gymnastics-easter-egg-hunt"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-04-04", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "Easter Loonie Swim | Harbour Pool (Fort Saskatchewan)", "date": "2026-04-04", "dayName": "Saturday", "time": "2:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "free"], "url": "https://www.familyfuncanada.com/edmonton/easter-loonie-swim-harbour-pool"}, {"title": "DIY Easter Planter | Salisbury Greenhouse (Sherwood Park)", "date": "2026-04-04", "dayName": "Saturday", "time": "2:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kids-workshops-at-salisbury-greenhouses"}, {"title": "Easter Egg Hunt | Dynamyx Gymnastics Club", "date": "2026-04-04", "dayName": "Saturday", "time": "3:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/dynamyx-gymnastics-easter-egg-hunt"}, {"title": "The Downtown Defrost | Churchill Square", "date": "2026-04-04", "dayName": "Saturday", "time": "3:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-downtown-defrost"}, {"title": "FREE Easter Fun | LEGO Stores", "date": "2026-04-05", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/free-lego-make-take"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-05", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "TELUS World of Science - Edmonton Jurassic World by Brickman", "date": "2026-04-05", "dayName": "Sunday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/telus-world-of-science-jurassic-world"}, {"title": "Dino-Mite Spring Break | TELUS World of Science - Edmonton", "date": "2026-04-05", "dayName": "Sunday", "time": "9:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/spring-break-easter-programming-at-telus-world-of-science-edmonton"}, {"title": "Griesbach Easter Egg Hunt | Maple Leaf Pond", "date": "2026-04-05", "dayName": "Sunday", "time": "10:30 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/griesbach-easter-egg-hunt"}, {"title": "Easter Bunny Photos | Bountiful Farmers' Market", "date": "2026-04-05", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-bountiful-farmers-market"}, {"title": "Easter Crafts & Egg Hunt | Sherbrooke Community League", "date": "2026-04-05", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/egg-hunt-sherbrooke-community-league"}, {"title": "Market Buds | Old Strathcona Farmers Market", "date": "2026-04-05", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/market-buds-at-old-strathcona-farmers-market"}, {"title": "Kiwi's Easter Scavenger Hunt | Kiwi Nurseries", "date": "2026-04-05", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-egg-scavenger-hunt-at-kiwi-nurseries"}, {"title": "Meet the Easter Bunny | Bass Pro Shops", "date": "2026-04-05", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/easter-bunny-at-cabelas"}, {"title": "Easter Hunt | Queen Mary's Market", "date": "2026-04-05", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/easter-queen-marys-market"}, {"title": "Sundae School | Made by Marcus (Mill Creek)", "date": "2026-04-05", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sundae-school-at-made-by-marcus"}, {"title": "FREE Slime Making Station | Bountiful Farmers' Market", "date": "2026-04-05", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["free"], "url": "https://www.familyfuncanada.com/edmonton/slime-bountiful-farmers-market"}, {"title": "The Mighty Ducks | Family Movie Sunday at CO*LAB", "date": "2026-04-05", "dayName": "Sunday", "time": "2:00 PM", "weekendLabel": "Apr 3–5, 2026", "weekendSat": "2026-04-04", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/family-movie-sundays-boyle"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-10", "dayName": "Friday", "time": "", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "46th Annual Orchid Fair | The Enjoy Centre", "date": "2026-04-10", "dayName": "Friday", "time": "12:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Sensory Gala | Bison Lodge", "date": "2026-04-10", "dayName": "Friday", "time": "5:30 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sensory-festival"}, {"title": "How to Train Your Dragon in Concert | Northern Alberta Jubilee Auditorium", "date": "2026-04-10", "dayName": "Friday", "time": "7:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/how-to-train-your-dragon-in-concert"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-11", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "Build a Farm Planter | Home Depot Kids Workshop", "date": "2026-04-11", "dayName": "Saturday", "time": "8:30 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/home-depot-kids-workshops"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-04-11", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "46th Annual Orchid Fair | The Enjoy Centre", "date": "2026-04-11", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Sensory Festival | Bison Lodge", "date": "2026-04-11", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sensory-festival"}, {"title": "Edmonton Coin Show | Central Lions Recreation Centre", "date": "2026-04-11", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/edmonton-coin-show"}, {"title": "Spring Market | Pioneer House", "date": "2026-04-11", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-04-11", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "How to Train Your Dragon in Concert | Northern Alberta Jubilee Auditorium", "date": "2026-04-11", "dayName": "Saturday", "time": "7:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/how-to-train-your-dragon-in-concert"}, {"title": "The Wizard of Oz | The Citadel Theatre", "date": "2026-04-12", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-wizard-of-oz-at-the-citadel-theatre"}, {"title": "DIY Pup Planter | Salisbury Greenhouse (Sherwood Park)", "date": "2026-04-12", "dayName": "Sunday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kids-workshops-at-salisbury-greenhouses"}, {"title": "46th Annual Orchid Fair | The Enjoy Centre", "date": "2026-04-12", "dayName": "Sunday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Edmonton Coin Show | Central Lions Recreation Centre", "date": "2026-04-12", "dayName": "Sunday", "time": "10:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/edmonton-coin-show"}, {"title": "Spring Family Sip n Paint | Malis Art Studio", "date": "2026-04-12", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/sip-n-paint-at-malis-art-studio"}, {"title": "Kitten Shower | Cheery Cat", "date": "2026-04-12", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kitten-shower-at-cheery-cat"}, {"title": "Sundae School | Made by Marcus (Mill Creek)", "date": "2026-04-12", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sundae-school-at-made-by-marcus"}, {"title": "Analog Bag Demo + Make a Bag Charm | Michaels Events", "date": "2026-04-12", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/michaels-sunday-makebreak"}, {"title": "Slime Lab - Mermaid Tale Slime | The Makery", "date": "2026-04-12", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 10–12, 2026", "weekendSat": "2026-04-11", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/events-the-makery"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-17", "dayName": "Friday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-17", "dayName": "Friday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "St. Albert Lifestyle Expo & Sale | Servus Credit Union Place", "date": "2026-04-17", "dayName": "Friday", "time": "2:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/st-albert-lifestyle-expo-sale"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-18", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-18", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-04-18", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "St. Albert Lifestyle Expo & Sale | Servus Credit Union Place", "date": "2026-04-18", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/st-albert-lifestyle-expo-sale"}, {"title": "The Lorax | Metro Reel Family Cinema", "date": "2026-04-18", "dayName": "Saturday", "time": "12:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/reel-family-cinema"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-04-18", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "The Big Little Concert | Whitemud Crossing Library Theatre", "date": "2026-04-18", "dayName": "Saturday", "time": "2:30 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/the-big-little-concert"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-19", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-19", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "Painted Pot & Tour - Kids Workshop | Salisbury Greenhouse (Sherwood Park)", "date": "2026-04-19", "dayName": "Sunday", "time": "10:00 AM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kids-workshops-at-salisbury-greenhouses"}, {"title": "Spring Family Sip n Paint | Malis Art Studio", "date": "2026-04-19", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/sip-n-paint-at-malis-art-studio"}, {"title": "St. Albert Lifestyle Expo & Sale | Servus Credit Union Place", "date": "2026-04-19", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/st-albert-lifestyle-expo-sale"}, {"title": "Sundae School | Made by Marcus (Mill Creek)", "date": "2026-04-19", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sundae-school-at-made-by-marcus"}, {"title": "OPEN HOUSE | Hardisty Fitness and Leisure Centre", "date": "2026-04-19", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/pool-party-edmonton-rec-centre"}, {"title": "Slime Lab - Crystal Geode Slime | The Makery", "date": "2026-04-19", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/events-the-makery"}, {"title": "Clay Pencil & Paintbrush Pals | Michaels Kids Club", "date": "2026-04-19", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/michaels-sunday-makebreak"}, {"title": "Madhatter's Tea Party | Stageworks Academy of the Performing Arts (Leduc)", "date": "2026-04-19", "dayName": "Sunday", "time": "2:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/madhatters-tea-party"}, {"title": "DIY Sensory Garden | Salisbury Greenhouse (Sherwood Park)", "date": "2026-04-19", "dayName": "Sunday", "time": "2:00 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/kids-workshops-at-salisbury-greenhouses"}, {"title": "Beards and Beads: Daddy and Me Event | Grizzly Cubs Den", "date": "2026-04-19", "dayName": "Sunday", "time": "2:30 PM", "weekendLabel": "Apr 17–19, 2026", "weekendSat": "2026-04-18", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/daddy-and-me-events-grizzly-cubs-den"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-24", "dayName": "Friday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-24", "dayName": "Friday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "Slime Cake Bakery | The Makery (Sherwood Park)", "date": "2026-04-24", "dayName": "Friday", "time": "5:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/slime-cake-bakery-at-the-makery"}, {"title": "ChocoFest (Adults Only) | Millennium Place (Sherwood Park)", "date": "2026-04-24", "dayName": "Friday", "time": "5:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/chocofest"}, {"title": "Shumka: Back to Our Roots | Northern Alberta Jubilee Auditorium", "date": "2026-04-24", "dayName": "Friday", "time": "7:30 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/shumka-back-to-our-roots"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-25", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-25", "dayName": "Saturday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "Snow Goose Festival | Tofield Community Hall", "date": "2026-04-25", "dayName": "Saturday", "time": "9:30 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/snow-goose-festival-tours"}, {"title": "Swing into Spring Show & Sale | Morinville Leisure Centre", "date": "2026-04-25", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Hand2Hand Spring Market | Terwillegar Community Church", "date": "2026-04-25", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-04-25", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "Horse Birthday Celebration | Putting Horse Ranch", "date": "2026-04-25", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/horse-birthday-celebration-at-putting-horse-ranch"}, {"title": "Mermaid's Cove Market | Alberta Aviation Museum", "date": "2026-04-25", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/mermaids-cove-market"}, {"title": "ChocoFest | Millennium Place (Sherwood Park)", "date": "2026-04-25", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/chocofest"}, {"title": "Bee Movie | Metro Reel Family Cinema", "date": "2026-04-25", "dayName": "Saturday", "time": "12:45 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/reel-family-cinema"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-04-25", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "A Charmed Affair Character Dining (K-Pop Hunters) | Smitty's - Manning Crossing", "date": "2026-04-25", "dayName": "Saturday", "time": "3:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/smittys-character-dining"}, {"title": "Riverview Crossing Carnival | Riverview Crossing Mall", "date": "2026-04-26", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-riverview-crossing"}, {"title": "Spring Carnival | Spruce Grove Grain Elevator", "date": "2026-04-26", "dayName": "Sunday", "time": "", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/spring-carnival-spruce-grove"}, {"title": "Snow Goose Festival | Tofield Community Hall", "date": "2026-04-26", "dayName": "Sunday", "time": "9:30 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/snow-goose-festival-tours"}, {"title": "Mother's Day Princess Tea Party | Charmed Party Room", "date": "2026-04-26", "dayName": "Sunday", "time": "10:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/mothers-day-princess-tea-party"}, {"title": "Spring Family Sip n Paint | Malis Art Studio", "date": "2026-04-26", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/sip-n-paint-at-malis-art-studio"}, {"title": "Swing into Spring Show & Sale | Morinville Leisure Centre", "date": "2026-04-26", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Sundae School | Made by Marcus (Mill Creek)", "date": "2026-04-26", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/sundae-school-at-made-by-marcus"}, {"title": "Paint a Spring Birdhouse | Michaels Events", "date": "2026-04-26", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/michaels-sunday-makebreak"}, {"title": "Slime Lab - Gold Mine Slime | The Makery", "date": "2026-04-26", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/events-the-makery"}, {"title": "Make a Derby Horseshoe (FREE) | Michaels Events", "date": "2026-04-26", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "Apr 24–26, 2026", "weekendSat": "2026-04-25", "tags": ["wheelchair", "free"], "url": "https://www.familyfuncanada.com/edmonton/michaels-sunday-makebreak"}, {"title": "Carnival | Premium Outlet Collection (Nisku)", "date": "2026-05-01", "dayName": "Friday", "time": "", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-premium-outlet-mall"}, {"title": "Read with the RCMP | Strathcona County Library", "date": "2026-05-01", "dayName": "Friday", "time": "10:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/read-with-rcmp-strathcona-library"}, {"title": "Carnival | Premium Outlet Collection (Nisku)", "date": "2026-05-02", "dayName": "Saturday", "time": "", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-premium-outlet-mall"}, {"title": "Market Buds | Old Strathcona Farmers Market", "date": "2026-05-02", "dayName": "Saturday", "time": "8:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/market-buds-at-old-strathcona-farmers-market"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-05-02", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "SCARS Spring Gift Market | Alberta Aviation Museum", "date": "2026-05-02", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-05-02", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "Carnival | Premium Outlet Collection (Nisku)", "date": "2026-05-03", "dayName": "Sunday", "time": "", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/carnival-at-premium-outlet-mall"}, {"title": "SCARS Spring Gift Market | Alberta Aviation Museum", "date": "2026-05-03", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/craft-fairs"}, {"title": "Market Buds | Old Strathcona Farmers Market", "date": "2026-05-03", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/market-buds-at-old-strathcona-farmers-market"}, {"title": "The Pink Pop Party | Midway Music Hall", "date": "2026-05-03", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/the-pink-pop-party"}, {"title": "Slime Lab - Beach Sand Slime | The Makery", "date": "2026-05-03", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "May 1–3, 2026", "weekendSat": "2026-05-02", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/events-the-makery"}, {"title": "The SpongeBob Musical | Maclab Centre (Leduc)", "date": "2026-05-08", "dayName": "Friday", "time": "7:30 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-spongebob-musical-at-the-maclab-centre"}, {"title": "Build a Keepsake Box | Home Depot Kids Workshop", "date": "2026-05-09", "dayName": "Saturday", "time": "8:30 AM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/home-depot-kids-workshops"}, {"title": "Mother's Day Brunch & Cruise | Edmonton Riverboat", "date": "2026-05-09", "dayName": "Saturday", "time": "9:00 AM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/edmonton-river-boat-mothers-day-brunch"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-05-09", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "Mama’s Bloom & Bliss Market | Picnics in the Forest", "date": "2026-05-09", "dayName": "Saturday", "time": "12:00 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/markets-in-the-forest"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-05-09", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "The SpongeBob Musical (Matinee) | Maclab Centre (Leduc)", "date": "2026-05-09", "dayName": "Saturday", "time": "2:30 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-spongebob-musical-at-the-maclab-centre"}, {"title": "The SpongeBob Musical | Maclab Centre (Leduc)", "date": "2026-05-09", "dayName": "Saturday", "time": "7:30 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/the-spongebob-musical-at-the-maclab-centre"}, {"title": "Mother's Day Brunch & Cruise | Edmonton Riverboat", "date": "2026-05-10", "dayName": "Sunday", "time": "9:00 AM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/edmonton-river-boat-mothers-day-brunch"}, {"title": "Mother's Day | Dear Doris", "date": "2026-05-10", "dayName": "Sunday", "time": "11:00 AM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/mothers-day-at-dear-doris"}, {"title": "Mama’s High Tea & Mini Market | Picnics in the Forest", "date": "2026-05-10", "dayName": "Sunday", "time": "12:00 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/markets-in-the-forest"}, {"title": "Mother's Day Tea | Grizzly Cubs Den", "date": "2026-05-10", "dayName": "Sunday", "time": "2:30 PM", "weekendLabel": "May 8–10, 2026", "weekendSat": "2026-05-09", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/mothers-day-at-grizzly-cubs-den"}, {"title": "Mamma Mia! | Northern Alberta Jubilee Auditorium", "date": "2026-05-15", "dayName": "Friday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/broadway-across-canada-new-season"}, {"title": "YEGPIN Pinball & Arcade Expo | Millennium Place", "date": "2026-05-15", "dayName": "Friday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/yegpin"}, {"title": "Mamma Mia! | Northern Alberta Jubilee Auditorium", "date": "2026-05-16", "dayName": "Saturday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/broadway-across-canada-new-season"}, {"title": "YEGPIN Pinball & Arcade Expo | Millennium Place", "date": "2026-05-16", "dayName": "Saturday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/yegpin"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-05-16", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "Fairytale Bloom Market | Alberta Aviation Museum", "date": "2026-05-16", "dayName": "Saturday", "time": "11:00 AM", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/fairytale-bloom-market"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-05-16", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "Mamma Mia! | Northern Alberta Jubilee Auditorium", "date": "2026-05-17", "dayName": "Sunday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/broadway-across-canada-new-season"}, {"title": "YEGPIN Pinball & Arcade Expo | Millennium Place", "date": "2026-05-17", "dayName": "Sunday", "time": "", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": ["wheelchair"], "url": "https://www.familyfuncanada.com/edmonton/yegpin"}, {"title": "LEGO and Lattes: Daddy and Me Event | Grizzly Cubs Den", "date": "2026-05-17", "dayName": "Sunday", "time": "2:30 PM", "weekendLabel": "May 15–17, 2026", "weekendSat": "2026-05-16", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/daddy-and-me-events-grizzly-cubs-den"}, {"title": "Rainmaker Rodeo | St. Albert", "date": "2026-05-22", "dayName": "Friday", "time": "", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/rainmaker-rodeo"}, {"title": "Rainmaker Rodeo | St. Albert", "date": "2026-05-23", "dayName": "Saturday", "time": "", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/rainmaker-rodeo"}, {"title": "Strathma Saturdays | Strathcona County Museum & Archives", "date": "2026-05-23", "dayName": "Saturday", "time": "10:00 AM", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": ["wheelchair", "sensory"], "url": "https://www.familyfuncanada.com/edmonton/free-admission-and-fun-at-strathma-saturdays"}, {"title": "Kidding Around | Rapid Fire Theatre", "date": "2026-05-23", "dayName": "Saturday", "time": "1:30 PM", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": ["sensory"], "url": "https://www.familyfuncanada.com/edmonton/kidding-around-with-rapid-fire-theatre"}, {"title": "Rainmaker Rodeo | St. Albert", "date": "2026-05-24", "dayName": "Sunday", "time": "", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/rainmaker-rodeo"}, {"title": "Slime Lab - Cookies and Cream Slime | The Makery", "date": "2026-05-24", "dayName": "Sunday", "time": "1:00 PM", "weekendLabel": "May 22–24, 2026", "weekendSat": "2026-05-23", "tags": [], "url": "https://www.familyfuncanada.com/edmonton/events-the-makery"}];
+
+// ─────────────────────────────────────────────────────────────────
+// TAB SWITCHING
+// ─────────────────────────────────────────────────────────────────
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ─────────────────────────────────────────────────────────────────
+// PLACES
+// ─────────────────────────────────────────────────────────────────
+let placeActiveTags = new Set();
+let placeActiveDists = new Set();
+
+function togglePlaceTag(tag, btn) {
+  if (placeActiveTags.has(tag)) { placeActiveTags.delete(tag); btn.classList.remove('on'); }
+  else { placeActiveTags.add(tag); btn.classList.add('on'); }
+  renderPlaces();
+}
+function togglePlaceDist(dist, btn) {
+  if (placeActiveDists.has(dist)) { placeActiveDists.delete(dist); btn.classList.remove('on'); }
+  else { placeActiveDists.add(dist); btn.classList.add('on'); }
+  renderPlaces();
+}
+
+const SECTION_DEFS = [
+  { id: 'wheelchair', label: '♿ Wheelchair & Disability-First' },
+  { id: 'sensory',    label: '🌟 Sensory-Friendly Programs' },
+  { id: 'indoor',     label: '🏠 Indoor Year-Round — Edmonton' },
+  { id: 'outdoor',    label: '🌿 Outdoor & Parks — Edmonton' },
+  { id: 'seasonal',   label: '🎪 Seasonal Events' },
+  { id: 'near',       label: '🚗 Just Outside Edmonton (~1 hr)' },
+  { id: 'daytrip',    label: '🗺️ Day Trips (1.5–2.5 hrs)' },
+  { id: 'support',    label: '💡 Programs & Support' },
+];
+
+function renderPlaces() {
+  const root = document.getElementById('places-root');
+  root.innerHTML = '';
+  let total = 0;
+
+  SECTION_DEFS.forEach(sec => {
+    let venues = VENUES.filter(v => {
+      if (v.cat !== sec.id) return false;
+      if (placeActiveTags.size > 0) {
+        for (const t of placeActiveTags) if (!v.tags.includes(t)) return false;
+      }
+      if (placeActiveDists.size > 0 && !placeActiveDists.has(v.dist)) return false;
+      return true;
+    });
+    if (!venues.length) return;
+
+    total += venues.length;
+    const sg = document.createElement('div');
+    sg.className = 'section-group';
+
+    const sh = document.createElement('div');
+    sh.className = 'section-head';
+    sh.innerHTML = `<h2>${sec.label}</h2><span class="scount">${venues.length}</span><div class="sline"></div>`;
+    sg.appendChild(sh);
+
+    venues.forEach((v, i) => {
+      const card = document.createElement('div');
+      card.className = 'venue-card';
+      card.style.animationDelay = (i * 0.04) + 's';
+
+      const nameEl = document.createElement('div');
+      nameEl.className = 'venue-name';
+      nameEl.innerHTML = v.url
+        ? `<a href="${v.url}" target="_blank" rel="noopener">${esc(v.name)} ↗</a>`
+        : esc(v.name);
+      card.appendChild(nameEl);
+
+      if (v.desc) {
+        const d = document.createElement('div');
+        d.className = 'venue-desc';
+        d.textContent = v.desc;
+        card.appendChild(d);
+      }
+      if (v.notes) {
+        const n = document.createElement('div');
+        n.className = 'venue-notes';
+        n.textContent = '💬 ' + v.notes;
+        card.appendChild(n);
+      }
+
+      const tr = document.createElement('div');
+      tr.className = 'tag-row';
+      const tagLabels = {
+        wheelchair: '♿ Wheelchair', sensory: '🌟 Sensory', free: '🆓 Free',
+        indoor: '🏠 Indoor', outdoor: '🌿 Outdoor'
+      };
+      v.tags.forEach(t => {
+        if (!tagLabels[t]) return;
+        const tEl = document.createElement('span');
+        tEl.className = 'vtag vtag-' + t;
+        tEl.textContent = tagLabels[t];
+        tr.appendChild(tEl);
+      });
+      card.appendChild(tr);
+      sg.appendChild(card);
+    });
+
+    root.appendChild(sg);
+  });
+
+  document.getElementById('places-count').textContent = total + ' venue' + (total !== 1 ? 's' : '');
+  document.getElementById('places-empty').classList.toggle('hidden', total > 0);
+  if (total === 0) root.innerHTML = '';
+}
+
+// ─────────────────────────────────────────────────────────────────
+// EVENTS
+// ─────────────────────────────────────────────────────────────────
+let evActiveWeekend = 'all';
+let evActiveTag = null;
+
+const weekends = [...new Set(EVENTS.map(e => e.weekendSat))].sort();
+const wkLabels = {};
+EVENTS.forEach(e => { wkLabels[e.weekendSat] = e.weekendLabel; });
+
+// Build weekend buttons
+const wbCont = document.getElementById('ev-weekend-btns');
+weekends.forEach(sat => {
+  const b = document.createElement('button');
+  b.className = 'fbtn wd';
+  b.textContent = wkLabels[sat];
+  b.onclick = () => setEvWeekend(sat, b);
+  wbCont.appendChild(b);
+});
+
+function setEvWeekend(sat, btn) {
+  evActiveWeekend = sat;
+  document.querySelectorAll('#event-filters .wd').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderEvents();
+}
+function toggleEvTag(tag, btn) {
+  if (evActiveTag === tag) {
+    evActiveTag = null;
+    document.querySelectorAll('#event-filters .wc, #event-filters .sn, #event-filters .fr').forEach(b => b.classList.remove('on'));
+  } else {
+    evActiveTag = tag;
+    document.querySelectorAll('#event-filters .wc, #event-filters .sn, #event-filters .fr').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+  renderEvents();
+}
+
+function renderEvents() {
+  let filtered = EVENTS.filter(e => {
+    if (evActiveWeekend !== 'all' && e.weekendSat !== evActiveWeekend) return false;
+    if (evActiveTag && !e.tags.includes(evActiveTag)) return false;
+    return true;
+  });
+
+  const root = document.getElementById('events-root');
+  root.innerHTML = '';
+  document.getElementById('ev-count').textContent = filtered.length + ' event' + (filtered.length !== 1 ? 's' : '');
+  document.getElementById('events-empty').classList.toggle('hidden', filtered.length > 0);
+  if (!filtered.length) return;
+
+  // Group by weekend → day
+  const byWk = {};
+  filtered.forEach(e => {
+    if (!byWk[e.weekendSat]) byWk[e.weekendSat] = {};
+    if (!byWk[e.weekendSat][e.date]) byWk[e.weekendSat][e.date] = [];
+    byWk[e.weekendSat][e.date].push(e);
+  });
+
+  Object.keys(byWk).sort().forEach(sat => {
+    const byDay = byWk[sat];
+    const total = Object.values(byDay).flat().length;
+    const wb = document.createElement('div');
+    wb.className = 'weekend-block';
+
+    const wh = document.createElement('div');
+    wh.className = 'weekend-head';
+    wh.innerHTML = `<h2>${wkLabels[sat]}</h2><span class="wcount">${total}</span><div class="wline"></div>`;
+    wb.appendChild(wh);
+
+    Object.keys(byDay).sort().forEach(dateStr => {
+      const evs = byDay[dateStr];
+      const dc = document.createElement('div');
+      dc.className = 'day-chunk';
+      dc.innerHTML = `<div class="day-label">${evs[0].dayName}</div>`;
+
+      evs.forEach((e, i) => {
+        const card = document.createElement('div');
+        card.className = 'ev-card';
+        card.style.animationDelay = (i * 0.03) + 's';
+
+        const timeEl = document.createElement('div');
+        timeEl.className = 'ev-time' + (e.time ? '' : ' allday');
+        timeEl.textContent = e.time || 'All Day';
+        card.appendChild(timeEl);
+
+        const body = document.createElement('div');
+        body.className = 'ev-body';
+
+        const tEl = document.createElement('div');
+        tEl.className = 'ev-title';
+        tEl.innerHTML = e.url
+          ? `<a href="${e.url}" target="_blank" rel="noopener">${esc(e.title)}</a>`
+          : esc(e.title);
+        body.appendChild(tEl);
+
+        if (e.tags.length) {
+          const tr = document.createElement('div');
+          tr.className = 'ev-tags';
+          const tl = {wheelchair:'♿ Wheelchair', sensory:'🌟 Sensory', free:'🆓 Free'};
+          e.tags.forEach(t => {
+            const s = document.createElement('span');
+            s.className = 'etag etag-' + t;
+            s.textContent = tl[t] || t;
+            tr.appendChild(s);
+          });
+          body.appendChild(tr);
+        }
+        card.appendChild(body);
+        dc.appendChild(card);
+      });
+      wb.appendChild(dc);
+    });
+    root.appendChild(wb);
+  });
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Init
+renderPlaces();
+renderEvents();
+</script>
+</body>
+</html>
